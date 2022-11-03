@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+	/* EVENTOS DE FORMULARIOS:
+	onfocus - quando clicamos num elemento
+
+	onblur - quando um elemento perde o foco, quando saimos dele
+
+
+	onchange - acionado quando o estado do elemento é modificado
+
+	*/
+
+//--------
+	function msgFormulario() {
+		document.write('vc redimensionou a janela<br />');
+	}
+//-------Se eu parasse o código aqui não seria executada a função. Ela só é processada caso elea seja chamada.
+	
+//--------
+
+
+	</script>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+    <!-- não há a necessidade de necessáriamente utilizar a tag <form>	</form> para obter eventos de formulário -->
+
+	abaixo processa evento quando o elemento é focado
+	<input onfocus="alert('o elemento foi focado')" type="text">
+	<br />
+
+	abaixo processa evento quando o elemento perde o foco
+	<input onblur="alert('o elemento foi perdeu o foco')" type="text">
+	<br />
+
+	<select onchange="alert('a opcao foi alterada')">
+		<option value="1">Primeira opcao</option>
+		<option value="2">Segunda opcao</option>
+	</select>
+
+  </body>
+</html>
+
+	 

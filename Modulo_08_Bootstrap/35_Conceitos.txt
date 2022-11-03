@@ -1,0 +1,10 @@
+(video 090)
+
+O que é um design responsivo?
+R: É um layout/design que se adapta aos diversos tipos de dispostivos (diferentes tamanhos de tela).
+---------
+bootstrap: framework para desenvolvimento de design responsivo
+---------
+media queries: codigos que usaremos para carregar um CSS diferente dependendo do tamanho da tela
+---------
+

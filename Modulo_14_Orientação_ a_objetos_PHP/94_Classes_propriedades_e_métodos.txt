@@ -1,0 +1,81 @@
+	(video 228, 229)
+------------------------------------------------------------------------------------------
+
+Classes:
+--------
+
+<?php
+
+	class Pessoa {
+		//Atributos
+		var $nome;
+		var $idade;
+
+		//Métodos
+		function nomeDoMetodo() {
+
+		}
+
+		function setNome($nome_definido) {  //setters (são os métodos que setam atributos (set))
+			$this->nome = $nome_definido;
+		}
+	
+		function getNome() {		//getters (são os métodos que levam atributos como informação (get))
+			return $this->nome;
+		}
+
+	}
+
+
+	//Instanciar uma classe:
+	$pessoa = new Pessoa();
+	
+	$pessoa->setNome('João Pedro');
+	echo $pessoa->getNome();
+	
+?>
+ 
+-------------------------------------------------------------------------------------
+
+Herança e polimordismo:
+-----------------------
+
+	Herança capacidade de uma classe de herdar atributos de uma classe mãe.
+	Polimorfismo: cada um tem seu próprio método. Possibilidade de sobrescrever o método da classe mãe.
+
+
+<?php
+
+	//Classe mãe ou superclasse
+	class Felino {
+		//Atributos
+		var $mamifero = 'sim';
+
+
+		//Métodos
+		function correr() {
+			echo 'Correr como felino';
+		}
+
+	}
+
+
+	//Classe filha ou subclasse
+	class Leopardo extends Felino { //a classe Leopardo herda os atributos e métodos da classe Felino
+
+	//Polimorfismo = sobrescrever o método da classe mãe
+		function correr() {
+			echo 'Correr como leopardo muito rápido.';
+		}
+	}
+
+
+	$leopardo = new Leopardo();
+
+	echo $leopardo->mamifero . '<br />';
+
+	$leopardo->correr();
+		
+?>
+  
+-------------------------------------------------------------------------------------

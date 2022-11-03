@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>JM Viagens - Página principal</title>
+	<meta charset="utf-8" />
+	<style>
+		#menu {
+			background-color: green;
+		}
+
+		#conteudo-principal {
+			background-color: gray;
+		}
+
+		#conteudo-secundario {
+			background-color: blue;
+		}
+
+		#rodape {
+			color: red;
+		}
+		
+		.verde {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		Home | Produtos | Contato
+	</div>
+
+	<br />	
+
+	<div id="conteudo-principal">
+		eis o que acontece se <div id="conteudo-secundario">eu quiser mudar </div> um atributo com outra div - acontece quebra de linha antes e depois do elemento, como pode ser visto com o conteudo "eu quiser mudar" que deixei dentro de uma nova div, além da do deste parágrafo.
+	</div>
+
+	<br />	
+
+	<div id="rodape">
+		Todos os direito reservados. Se eu usar o span aqui eu consigo especificar <span class="verde"> formatos </span> sem perder estrutura. Eu especifiquei um span para a palavra "formatos".
+	</div>
+
+</body>
+
+</html>

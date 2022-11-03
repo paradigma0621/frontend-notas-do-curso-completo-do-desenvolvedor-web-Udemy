@@ -1,0 +1,42 @@
+(Esse arquivo foi criado depois do curso, agregando informações coletadas posteriormente)
+-----------------------------------------------------------------------------------------
+
+Renomear nome de tabela:
+-----------------------
+rename table nome_usuario_atual to nome_usuario_novo
+
+-----------------------------------------------------------------------------------------
+
+SELECT * FROM tb_tweet ORDER BY data_inclusao DESC;
+
+retorna as mensgens/tweets (do módulo 17 desse curso) salvas na tabela tb_tweet em ordem primeiro do mais atual, para o mais antigo (ele faz isso para exibir as msgs na tela).
+-------------------------------------------------------------------------------------------
+no video 273 (mais pro final no video) tem uma sentença de query interessante: (ver explicação no video. Adianto que ela procura todas as mensagens postadas por um usuário que está logado).
+Na verdade, a query abaixo foi tirada do video 278 (ela tem um pouco de texto a mais), e é concluida sua explicação neste video (porém é importante ver a explicacao inicial do video 273)
+(arquivo get_tweet.php)
+
+$sql = " SELECT t.id_tweet, t.id_usuario, t.tweet, DATE_FORMAT(t.data_inclusao, '%d %b %Y %T') AS data_inclusao_formatada, u.usuario ";
+$sql.= " FROM tweet AS t JOIN usuarios AS u ON (t.id_usuario = u.id) ";
+$sql.= " WHERE id_usuario = $id_usuario ";
+$sql.= " OR id_usuario IN (SELECT seguindo_id_usuario FROM usuarios_seguidores WHERE id_usuario = $id_usuario) ";
+$sql.= " ORDER BY data_inclusao DESC ";
+
+$resultado_id = mysql_query($sql);
+
+------------------------------------------------------------------------------------------------
+no video 275 (no tempo: 6:24) (na verdade eu acho que a explicação da query abaixo é só do video 277)
+(arquivo get_pessoas.php)
+
+
+$sql = " SELECT u.*, us.id_usuario_seguidor FROM usuarios AS u ";
+$sql.= " LEFT JOIN usuarios_seguidores AS us ON (u.id = us.seguindo_id_usuario AND us.id_usuario = $id_usuario) ";
+$sql.= " WHERE u.usuario like '%$nome%' AND u.id <> $id_usuario ";
+
+$resultado_id = mysql_query($sql);
+
+
+Nessa query, a parte: u.usuario like '%$nome%'
+significa que estamos procurando qualquer usuario que contenha uma cadeia de caracteres onde o $nome esteja contido - ou seja: podem haver caracteres à direita, ou à esquerda, mas encontramos os que tem pelo menos $nome no meio.
+
+------------------------------------------------------------------------------
+

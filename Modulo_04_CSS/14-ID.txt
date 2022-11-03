@@ -1,0 +1,42 @@
+(video 034 (continuação))
+
+ID:
+No mesmo lugar onde são definidos os seletores e classes (dentro de style em <head>, pode-se definir o ID (estas últimas começam com um ponto "#" (esse caractere chama-se cerquilha)).
+
+----------------------------
+exemplo:
+	<head>
+		<title>Página a ver com  CSS</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+
+			p {
+				color: green;
+				border: 1px solid blue;
+			}
+
+			.paragrafo {
+				color: red;
+			}
+
+			#azul {
+				color: blue;
+			}
+		</style>
+	</head>
+-----------------------------
+então dentro do <BODY> nós especificamos os objetos que terão as propriedades de "#azul". Para isso colocamos, por exemplo:
+
+	<h1 id="azul"> 
+	Título em azul
+	</p>
+------------------------
+
+(notar que dentro do atributo ID não se coloca o "#" que foi usado na definição da classe dentro de <HEAD>). Já vimos que acontece o mesmo com a "class" em relação ao ponto (".").
+
+Uma coisa importante que se conclui, como é visto no código "14-ID_no_txt_do_14.html" que é possível especificar uma característica (de cor, tamanho, etc) para uma tag - é possível ser mais específico. Ao contrário do que acontece com o uso de classe, à qual podemos usa-la para se lhe atribuir a vários elementos dentro da página, para a id é conveniente que se lhe atribua a apenas um único elemento por página. Mais a frente será visto que o javascript faz ação sobre um elemento através do intermédio de seu id.
+
+obs: os id's não são específicos em relação a objetos, podemos usá-los em qualquer um.
+obs2: usar id mais de uma vez numa mesma página não dá erro, mas convém? a regra diz que não.
+obs3: é possível combinar seletor, classe e id em um único elemento.
+--------------------

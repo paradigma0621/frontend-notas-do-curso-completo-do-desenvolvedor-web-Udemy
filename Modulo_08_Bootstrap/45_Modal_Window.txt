@@ -1,0 +1,36 @@
+(video 109)
+
+A modal window é reponsíva: experimente fazer resize na janela e ver como a modal window se comporta.
+---
+O que apareceu de novo:
+(obs: ver comentário sobre essas linhas no código html)
+
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">
+        Logar
+      </button>
+------ (...)
+
+      <form class="modal fade" id="janela">
+        
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <!-- cabecalho -->
+            <div class="modal-header">
+			(...)
+            </div>
+
+            <!-- corpo -->
+            <div class="modal-body">
+			(...)
+ 
+            </div>
+
+            <!-- rodape -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">
+                Cancelar
+              </button>
+			(...)
+            </div>
+

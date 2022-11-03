@@ -1,0 +1,34 @@
+HTML: HyperText Markup Language. Linguagem de marcação de hipertexto.
+
+tag é o nome do conjunto de: menor, texto, maior. Exemplo: <br>, <b>, </br>, <script>, etc...
+
+Se um arquivo está nomeado como .html, mas não tem a tab <HTML>, um navegador que ler esse arquivo, se por exemplo tiver uma tag de bold lá dentro, vai deixar no browser mesmo assim o texto em negrito. Ex:
+Texto <b>em negrito</b> como exemplo.
+
+------------------------------------------------
+começa-se um HTML com a tag que define o tipo de documento:
+<!doctype html>
+-----------
+depois coloca-se <head> e <body>.
+Dentro de <head> coloca-se formações importantes, mas que não são exibidas na página. Exemplo: tipo de caracteres que serão usadas na página - tipo de javascript que será usado,etc
+<BODY> carrega o que será exibido para o usuário final.
+-------------------------
+dentro de <HEAD> colocamos a tag <title>, para colocar o título da página. 
+	Dentro de <HEAD> usamos também <META>, que é para poder usar caracteres especiais na página. Porém essa tag é diferente, essa não abre e depois fecha, mas sim coloca tudo dentro de uma tag só: <meta charset="" /> (o que foi dentro chamad-se de "atributo"). o atributo charset irá identidicar  para nossa página qual os caracteres que iremos utilizar. O "utf-8" é um charset que iremos utilizar para que seja possível escrever acentos, cecidilha, dentre outros caracteres da língua portuguesa. No fim fica como:
+		<meta charset="utf-8" />
+
+--------------------------------------------
+A nossa página está como:
+
+<!doctype html>
+<html>
+	<head>
+		<title>Meu site</title>
+	<meta charset="utf-8" />
+	</head>
+
+	<body>
+		Minha primeira Página
+	</body>
+</html>
+-----------------------------------------

@@ -1,0 +1,59 @@
+(video 048)
+A tag <DIV> assume formato de caixa que é diferente da do incorporado pela tag <span>  - ver exemplo no arquivo 19_01_BoxModel.html
+Diz-se que a DIV tem um comportamento do tipo block, e que o span tem um comportamento do tipo inline.
+
+É possível especificarmos espaçamentos como mostrado na imagem: 19_BoxModel.png
+
+Para tanto usamos as propriedades:
+	paddding
+	margin
+dentro da tag style.
+
+As formatações h1, h2, ... e ainda outras possui propriedades de margin e padding definidas, sendo possível mudá-las.
+----------------------
+
+Exemplo de configurações dessas:
+------
+	<style type="text/css">
+	#cabecalho {
+	   border: 2px solid red;
+	   margin: 30px; /*especifica margem de 10px em todas as direções*/
+	   padding: 50px;/*especifica padding de 30px em todas as direções*/
+	}
+
+	#estilo1 {
+	   border: 2px solid red;
+	   margin-top:40px;
+	   margin-left: 90px;
+	   margin-bottom: 20px;
+	   margin-right: 95px;
+			
+	   padding-bottom: 30px;
+	   padding-top: 90px;
+	   padding-left: 32px;
+	   padding-right: 33px;	   	   	   	   
+	}
+
+
+	#estilo2 {
+	   border: 2px solid red;
+
+	   margin:30px 40px 50px 260px; /*Especifica todas as margens, sendo os valores atribuidos no sentido horário: top, right, bottom e left.*/
+
+	   padding: 20px 30px 40px 150px; /*Especifica todas os paddings, sendo os valores atribuidos no sentido horário: top, right, bottom e left.*/
+	}
+
+	#estilo3 {
+	   border: 2px solid red;
+
+	   margin:30px 50px; /* são especificadas distâncias de 30px tanto para baixo como para cima, e de 50px tanto pra direita quanto pra esquerda.*/
+	}
+
+	#estilo4 {
+	   border: 2px solid red;
+
+	   margin:30px auto; /* são especificadas distâncias de 30px tanto para cima como para baixo, e centralizado em relção à direita e esquerda.*/
+	}
+
+</style>
+

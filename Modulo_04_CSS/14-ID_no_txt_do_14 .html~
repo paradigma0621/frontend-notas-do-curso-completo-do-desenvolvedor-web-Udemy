@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Página a ver com  CSS</title>
+		<meta charset="utf-8" />
+
+		<style type="text/css">
+
+			p {
+				color: green;
+				border: 1px solid blue;
+			}
+		
+			.paragrafo {
+				color: red;
+			}
+			
+			#azul {
+				color: blue;
+			}					
+		</style>
+	</head>
+	
+	<body>
+
+	<h1 id="azul">
+	conteudo formatado copm estilo cabeçalho
+	</h1>
+
+
+	<p> 
+	conteudo formatado com estilo ... esse é o  parágrafo, blablblablablablabllbabl alsdkf sdlf asdlkjf lkajsd flkj asdlkjfkljasdlkfk asldkjf kla sjdklfj asdkflkd lk
+	</p>
+
+	<p> 
+	conteudo formatado com estilo ... esse é o  parágrafo, blablblablablablabllbabl alsdkf sdlf asdlkjf lkajsd flkj asdlkjfkljasdlkfk asldkjf kla sjdklfj asdkflkd lk
+	</p>
+
+	<p class="paragrafo"> 
+	esse paragrafo usou class, blablblablablablabllbabl alsdkf sdlf asdlkjf lkajsd flkj asdlkjfkljasdlkfk asldkjf kla sjdklfj asdkflkd lk
+	</p>
+
+
+	<p> 
+	esse é o 5 parágrafo, blablblablablablabllbabl alsdkf sdlf asdlkjf lkajsd flkj asdlkjfkljasdlkfk asldkjf kla sjdklfj asdkflkd lk
+	</p>

@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+
+	var v=5;
+	
+	while (v>=1) {
+		//dentro do while vale break e continue também		
+		document.write(' a var v vale: ' + v + '<br />');
+		v--;
+	}
+
+//-------------------------------------------------------
+	document.write('<br /><br />');
+
+	var u=1
+	while (u<=6) {
+		document.write(' a var u vale: ' + u + '<br />');
+		if (u==3) break;
+		u++;
+
+	}
+//-------------------------------------------------------
+	document.write('<br /><br />');
+
+	for (var i=1; i<=10; i++) {
+		document.write(' a var i vale: ' + i + '<br />');
+	}
+//-------------------------------------------------------
+	
+	document.write('<br /><br />');
+
+	for (var j=1; j<=5; j++) {
+		if (j == 3) continue; //pula pro próximo j quando j=3
+		document.write(' a var j vale: ' + j + '(obs: ele vai pular o valor 3)<br />');
+	}
+//-------------------------------------------------------
+	//var k=1;
+	document.write('<br /><br />');
+	do {
+		document.write('executa pelo menos uma vez o do while<br />');
+		//obs: aqui tb vale break e continue
+	} while(false);
+//-------------------------------------------------------
+		
+
+	</script>
+
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html>
+
+	 

@@ -1,0 +1,37 @@
+(video 066)
+Da html simples (antiga) para a html5 mudou:
+
+-Acrescimo de:
+	<html lang="pt-br">
+
+---------------------------------------------
+
+-Mudança de:
+	<div id="cabecalho">
+
+	</div>
+surgiu uma tag específica para cabeçalho:
+
+<header>
+...
+</heade r>
+---------------------------------------------
+-Mudança de:
+	<div id="rodape">
+
+	</div>
+surgiu uma tag específica para rodapé:
+<footer>
+...
+</footer>
+---------------------------------------
+-Mudança de:
+	<div id="menu">
+
+	</div>
+
+Surgiu a tag específica para menu:
+<nav> 
+vem de NAVegação = barra de navegação (= menu)
+</nav>
+---------------------------------------------

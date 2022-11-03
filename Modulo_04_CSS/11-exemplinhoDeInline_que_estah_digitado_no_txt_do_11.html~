@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JM Viagens - Página principal</title>
+		<meta charset="utf-8" />
+	</head>
+	
+	<body>
+		<p style = "color: red; border: 1px solid red"> 
+	conteudo formatado com estilo 1... esse é o primeiro parágrafo, blablblablablablabllbabl alsdkf sdlf asdlkjf lkajsd flkj asdlkjfkljasdlkfk asldkjf kla sjdklfj asdkflkd lk
+		</p>
+	
+		<h1 style = "color: blue; size: 78">
+		conteudo formatado copm estilo 2
+		</h1>
+	</body>
+</html>
+

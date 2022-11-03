@@ -1,0 +1,15 @@
+(video 168)
+
+jQuery é um framework javascript (biblioteca que contém métodos e funções - maleta de ferramentas com uma  série de coisas prontas para web). É o framework javascrit que mais se destaca.
+
+Com jQuery podemos criar plugins ou incorporar plugins o que é um plugin? R: aplicação com  o objetivo de resolver problemas específicos.
+
+Com jQuery temos efeitos e animações prontos.
+
+Ele trata Ajax: requisições sincronas e assíncronas.
+
+Com jQuery temos maiores captura eventos.
+
+----------------------
+
+incluir o jQuery por inclusão CDN (Content Delivery Network) consiste em especificar o link da internet onde tem o jquery-x.y.z.js

@@ -1,0 +1,81 @@
+(video 130, 131, 132, 133, 134)
+----------------------
+(video 130)
+Javascript possibilita tratar e aplicar dinâmica aos elementos da página.
+
+Client-side (executada pelo browser).
+
+html + css = página estática, sem interação com o usuário.
+
+---------------------
+(video 131)
+
+como inserir javascript no html5:
+
+<script type="text/javascript">
+	aqui fica o código
+</script>
+
+OU
+
+<script language="javascript" src="arquivo_javascript.js"></script>
+
+----------------------
+Porque deixar o javascript dentro de <head> e não dentro
+de <body>?
+Porque a seção head é carregada antes da body, antes dos elementos visuais começarem a serem exibidos no browser. Se algum elemento do body executa um código javascript antes da inclusão do código, ele dá erro.
+-------------------------
+
+(video 132)
+Comentários:
+//esse é um comentário de uma linha
+
+ou
+
+/* esse é um comentário
+com várias linhas....
+quantas quiser */
+----------------------
+
+(video 133)
+Variáveis
+começar variáveis com letras ou underline
+
+javascript é case sensitive. não se pode usar nem cecidilha nem letras acentuadas.
+
+define-se variáveis precendendo os nomes por var:
+
+var curso=123;
+var curso="texto";
+var houveLucro=true;
+(a tipagem é definida pelo valor de atribuição (se é float, string, etc)
+
+em valores fracionados são numeras com "." (e não vírgula ",").
+var numero=1.13;
+
+
+------------------
+Saídas:
+
+	var texto = "Aula de javascript";
+	document.write(texto);
+
+	var saida1 = "Para ver esse texto tem que inspecionar com o browser em modo desenvolvedor";
+	console.log(saida1); /* Para ver esse texto tem que inspecionar com o browser em modo desenvolvedor */
+----------------------
+
+(video 134)
+Concatenação
+
+	var texto = "Aula de javascript";
+	var texto2 = "<br /> <br /> virtual";
+
+	document.write(texto+texto2);
+
+	var nome = prompt("Digite o seu nome:"); //Comando de entrada de dados
+
+	var idade=13;
+
+	
+----------------------
+

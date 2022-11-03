@@ -1,0 +1,61 @@
+(video 222, 223)
+--------------------------------------------------------------------------------
+			FUNÇÕES PARA TRATAR STRINGS
+--------------------------------------------------------------------------------
+
+
+FUNÇÂO "strtolower":
+---------------------
+	Converte string de caracteres do alfabeto para letras minúsculas.
+	Ex:
+	strtolower($texto);
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "strtoupper":
+---------------------
+	Converte string de caracteres do alfabeto para letras maiúsculas.
+	Ex:
+	strtoupper($texto);
+-------------------------------------------------------------------------------
+
+FUNÇÂO "ucfirst":
+---------------------
+	Converte apenas a primeira letra de uma string para caractere maiúscula.
+	Ex:
+	ucfirst($texto); //upper case first
+	
+	Se o primeiro caractere for um espaço ou um número, não aplica de deixar a primeira string maiúscula.
+
+--------------------------------------------------------------------------------
+
+FUNÇÂO "strlen": 
+---------------------
+	Informa o número de caracteres de uma string.
+	Ex:
+	strlen($texto); //string lenght
+
+--------------------------------------------------------------------------------
+
+FUNÇÂO "str_replace":
+---------------------
+	Substitui uma caractere de uma string específico por um outro.
+	Ex:
+	str_replace(".", ",", $texto); //substitui ponto pela vírgula
+
+--------------------------------------------------------------------------------
+
+FUNÇÂO "substr":
+---------------------
+	Retorna uma parte de uma string. 
+	Parâmetros:
+		1o) String
+		2o) A partir de qual caractere deseja pegar. (Obs: O primeiro caractere da string se encontra na posição zero).
+		3o) Número de caracteres que se deseja pegar.
+	Ex:
+	substr($texto, 0, 2); //Pega apenas os 2 primeiros caracteres da string
+	substr($texto, 2, 5); //Pega a partir do 3o caractere e escolhe os 5 caracteres seguintes.
+
+
+
+

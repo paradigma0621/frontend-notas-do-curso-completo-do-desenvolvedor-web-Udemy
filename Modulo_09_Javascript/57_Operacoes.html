@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+//--------------- Operações ----------------(video 144)-------
+
+		var opcao=1;
+		var texto='vamos ver';
+		var num1=2;
+		var num2=3;
+
+		document.write(texto + '- o valor de num1: '+num1 + ' + num2: ' + num2 + ' é: ' + (num1+num2)); //importante por () no final: (num1+num2), se não ele não soma, mas apenas apresenta na tela.
+
+		document.write('<br /> o incremento pré de num1 é: '+(++num1) + ' - o incremento pós é: ' + (num1++));
+//observar que em num1++ ele só incrementa depois de apresentar  na tela, mesmo que ele seja especificado entre parênteses.
+		document.write('<br /> agora sim temos num1++: ' + num1);
+
+
+//converte cadeias de caracteres para números:
+//2 maneiras: parseInt e parseFloat
+	var valor1 = prompt('Entre com o 1o número float: ');
+	var valor2 = prompt('Entre com o 2o número float: ');
+
+	var resultado;
+	resultado=parseFloat(valor1)+parseFloat(valor2);
+
+		document.write('<br /> resultado da soma: ' + resultado);
+
+	</script>
+
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html>
+
+	 

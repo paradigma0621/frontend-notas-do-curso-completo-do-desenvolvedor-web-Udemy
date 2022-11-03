@@ -1,0 +1,61 @@
+(video 036)
+
+tag DIV:
+Como o próprio nome diz é usada para DIVidir os conteúdos. Criar elementos em bloco. Cria estruturas no site.
+
+Porém a DIV é um elemento bloco - tem a propriedade da quebra de linha antes e depois do elemento, tem um espaçamento antes e um depois. Obs: não vi nem testei, mas acredito que com o div eu posso usar seletor, classe ou id.
+
+tag SPAN
+O elemento SPAN é um elemento inline, ele fica na mesma linha do texto. É possível ter uma configuração em relação à atributos, sem mudar a estrutura de onde se está trabalhando. Obs: não vi nem testei, mas acredito que com o span eu posso usar seletor, classe ou id.
+----------------------------
+exemplo:
+<!doctype html>
+<html>
+<head>
+	<title>JM Viagens - Página principal</title>
+	<meta charset="utf-8" />
+	<style>
+		#menu {
+			background-color: green;
+		}
+
+		#conteudo-principal {
+			background-color: gray;
+		}
+
+		#conteudo-secundario {
+			background-color: blue;
+		}
+
+		#rodape {
+			color: red;
+		}
+		
+		.verde {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		Home | Produtos | Contato
+	</div>
+
+	<br />	
+
+	<div id="conteudo-principal">
+		<h5> eis o que acontece se <div id="conteudo-secundario">eu quiser mudar </div> um atributo com outra div - acontece quebra de linha antes e depois do elemento, como pode ser visto com o conteudo "eu quiser mudar" que deixei dentro de uma nova div, além da do deste parágrafo. </h5>
+		<h3> aqui eu continuo com mais texto dentro da div. </h3>
+	
+	</div>
+
+	<br />	
+
+	<div id="rodape">
+		Todos os direito reservados. Se eu usar o span aqui eu consigo especificar <span class="verde"> formatos </span> sem perder estrutura. Eu especifiquei um span para a palavra "formatos".
+	</div>
+
+</body>
+
+</html>
+

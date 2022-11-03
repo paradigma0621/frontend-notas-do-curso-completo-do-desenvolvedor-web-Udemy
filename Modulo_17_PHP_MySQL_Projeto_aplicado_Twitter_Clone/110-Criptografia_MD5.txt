@@ -1,0 +1,29 @@
+(video 268)
+-----------------------------------------------------------------------
+
+Criptografia MD5:
+-----------------
+
+Mesmo fazendo uma busca no banco de dados na coluna "senha" não se tem a senha original.
+
+No PHP podemos criptografar com: MD5, SHA1, BASE64.
+	De mão única: MD5 e SHA1 (não são possíveis de descriptografar)
+	De mão dupla: BASE64 (é possível descriptografar)
+
+
+Elas retornam uma string criptgrafado, que chamamos de "hash".
+
+
+MD5: hash de 32 bytes.
+
+---------------
+
+Grava-se a senha criptografada no banco de dados na hora do cadastro.
+AP/Pró(em registra_usuario.php => $senha=md5($_POST['senha']) ):
+     
+     $senha_md5=md5($senha_que_o_usuario_digitou_no_input_para_fazer_cadastro_do_seu_usuario)
+     grava_a_senha_md5_acima_no_banco_de_dados();
+======
+Na hora que o usurário quiser logar:
+(em validar_acesso.php, onde digita a senha  de login)
+$senha=md5($_POST['senha']);

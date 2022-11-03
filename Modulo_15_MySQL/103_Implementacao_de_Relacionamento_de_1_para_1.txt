@@ -1,0 +1,67 @@
+(video 251, 253, 254)
+------------------------------------------------------------------------------------------
+
+RELACIONAMENTO ENTRE TABELAS:
+----------------------------
+
+Relacionamento de 1 para 1 (muito pouco utilizado):
+--------------------------
+
+
+create table tb_funcionarios(
+	id_funcionario int not null primary key AUTO_INCREMENT,
+	matricula varchar(20),
+	data_admissao datetime,
+	idade int,
+	sexo char(1)
+)
+
+----->	id_funcionario é uma chave primária (primary key).
+---------------------------------------------------------
+create table tb_funcionarios_dados_contato(
+	id_funcionario_dados_contato int not null primary key auto_increment,
+	id_funcionario int not null,
+	telefone_fixo varchar(20),
+	telefone_celular varchar(20),
+	foreign key(id_funcionario) REFERENCES tb_funcionarios(id_funcionario)
+)
+
+----->	foreign key(id_funcionario) define a chave estrangeira
+
+-------------------------------------------------------
+
+create table tb_funcionarios_dados_endereco(
+	if_funcionario_dados_endereco int not null primary key auto_increment,
+	id_funcionario int not null,
+	endereco varchar(100),
+	cidade varchar(50),
+	bairro varchar(50),
+	cep varchar(20),
+	uf char(2),
+	foreign key(id_funcionario) REFERENCES tb_funcionarios(id_funcionario)
+)
+-------------------------------------------------------
+
+ADICIONAR TODOS OS DADOS DO ARQUIVO 103_Implementacao_de_Relacionamento_de_1_para_1_Para_Trabalhar_No_Aprendizado.txt
+e depois trabalhar com os comando:
+
+select * from
+tb_funcionarios as f
+left join tb_funcionarios_dados_contato as fc on (f.id_funcionario = fc.id_funcionario)
+
+
+ele apelidou 'tb_funcionarios' de 'f', e apelidou também 'tb_funcionarios_dados_contato' de 'fc' - depois os pareou em um left joing com ponto de junção usando a chave 'id_funcionario'.
+
+
+Depois no video da Udemy ele "pareou" mais uma tabela com as outras 2:
+select * from
+tb_funcionarios as f
+left join tb_funcionarios_dados_contato as fc on (f.id_funcionario = fc.id_funcionario)
+left join tb_funcionarios_dados_endereco as fe on (f.id_funcionario = fe.id_funcionario)
+
+
+Podemos ser específicos em relação às coluns que queremos ver no join:
+select f.matricula, fc.telefone_fixo, fc.telefone_celular, fe.endereco, fe.uf from tb_funcionarios as f
+left join tb_funcionarios_dados_contato as fc on (f.id_funcionario = fc.id_funcionario)
+left join tb_funcionarios_dados_endereco as fe on (f.id_funcionario = fe.id_funcionario)
+

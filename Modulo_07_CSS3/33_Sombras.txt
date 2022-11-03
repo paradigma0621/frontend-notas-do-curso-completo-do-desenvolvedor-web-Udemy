@@ -1,0 +1,3 @@
+(video 085)
+
+As sombras não influenciam no tamanho final do elemento. A sombra fica apenas no fundo e não influencia nos posicionamentos dos objetos.

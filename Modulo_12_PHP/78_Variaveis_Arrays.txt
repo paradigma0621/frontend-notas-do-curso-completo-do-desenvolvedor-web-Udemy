@@ -1,0 +1,17 @@
+(video 195)
+--------------------------------------------------------------------------------
+
+Variáveis Arrays
+----------------
+Ver arquivo 78_Variaveis_Arrays.php para diversos exemplos.
+
+--------------------------------------------------
+
+podemos incluir dentro de um mesmo array váriaveis de vários tipos:
+$outra_lista2 = array(
+		'celula1' => 'Feijao3', 
+		'celula2' => true, 
+		1 => $lista_de_compras[4], 
+		4 => 'Batata3',
+		5 => -2.1 
+		);

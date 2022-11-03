@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Jogo</title>
+		<!-- jquery -->
+		<script src="jQuery/jquery-3.4.1.js"></script>
+
+
+		<script type="text/javascript">
+
+
+			$(document).ready( function() {
+					
+/*
+
+.focus() //quando o elemente recebe o foco do cursor
+.blur() //quando o elemente perde o foco do cursor
+.change() //quando o elemento é modificado
+	(POR ID:) $('#campo1').funcao();
+	(POR Class:) $('.campo1').funcao();
+*/
+				$('.campo1').focus( function() {
+					alert('elemento1 foi focado');
+				})
+
+				$('.campo2').change( function() {
+					alert('elemento2 foi modificado');
+				});
+
+
+			});
+
+			
+
+		</script>
+
+	</head>
+
+	<body>
+		<input class="campo1" type="text">
+
+		<select class="campo2" />	
+			<option value="1">Primeira opção</option>
+			<option value="2">Segunda opção</option>
+		</select>
+
+	</body>
+</html>

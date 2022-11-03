@@ -1,0 +1,2 @@
+No navegador google chrome há uma opção dentro da extenção "web developer extension", depois dentro de "CSS"->"Disable All Styles" que tira a estilização da página criada pelos arquivos .css.
+Também rodei a ferramenta para o desenvolvedor do chrome e vi que ela é superior à do firefox.

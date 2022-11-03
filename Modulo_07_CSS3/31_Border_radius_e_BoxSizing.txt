@@ -1,0 +1,34 @@
+(video 080)
+
+Nas páginas da w3schools ele dá o prefixo que devemos incluir nas propriedades da CSS para conseguir carregar os estilos nos diferentes browsers:
+Por exemplo:
+https://www.w3schools.com/cssref/css3_pr_box-sizing.asp
+
+na guia Browser Support, ele pede os seguintes prefixos:
+
+Google Chrome: -webkit-
+Mozilla: -moz-
+Safari: -webkit-
+
+portanto, para uma propriedade como por exemplo: border-radius
+-----
+#box {
+	width: 300px;
+	height: 300px;
+	background: #b9c941;
+	padding: 20px;
+	border-radius: 20px 50px 80px 100px;
+}
+------------------
+
+será preciso escrever:
+
+#box {
+	width: 300px;
+	height: 300px;
+	background: #b9c941;
+	padding: 20px;
+	-webkit-border-radius: 20px 50px 80px 100px;
+	-moz-border-radius: 20px 50px 80px 100px;
+}
+

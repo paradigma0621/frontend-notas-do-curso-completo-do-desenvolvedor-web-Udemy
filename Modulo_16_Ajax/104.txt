@@ -1,0 +1,11 @@
+(videos 255, )
+------------------------------------------------------------------------------------------------
+
+AJAX = Asynchronous Javascript and XML - (tradução: Javascript e XML Assíncrono)
+------------------------------------------------------------------------------------------------
+
+
+(AP: Abaixo 2 parágrafos pegos de uma página da internet)
+Não havia muito rigor quanto à utilização correta das tags: elas poderiam ser formadas por letras maiúsculas e/ou minúsculas, era possível ter uma tag de abertura, <p> por exemplo, sem ter a de fechamento,</p>, e ainda assim alguns navegadores conseguiam renderizar as páginas corretamente, embora, às vezes, o resultado da renderização fosse uma página com formatação irregular. Como hoje há muitos dispositivos diferentes que utilizam navegadores web, nem todos possuem um interpretador HTML poderoso, que consiga lidar com estes erros. Por conta destes e de outros fatores, ao longo dos anos, houve algumas melhorias para auxiliar os interpretadores HTML dos navegadores, de forma que agora as tags seguem o padrão XML (eXtensible Markup Language ou Linguagem de Marcação Extensível) para representar as páginas web, chamado XHTML (eXtensible HyperText Markup Language).
+
+A principal diferença entre HTML e XHTML é que a formação das tags fica um pouco mais rigorosa, de forma que se houver qualquer erro, o documento não é considerado válido. Com XHTML, as tags devem sempre ser formadas por letras minúsculas e possuir as tags de abertura e fechamento corretamente definidas. Por esta formalização, XHTML tem se tornado um padrão. 

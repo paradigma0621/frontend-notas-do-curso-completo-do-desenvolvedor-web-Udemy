@@ -1,0 +1,12 @@
+(video 068)
+Da html simples (antiga) para a html5 mudou (continuação):
+
+-Acrescimo de:
+	<article> - postagens
+	<section> - seções gerais
+	<time> - horas e datas
+	<aside> ("de lado") - informações do autor, banners, menus laterais
+
+	Consegue formatar melhor com css.
+---------------------------------------------
+

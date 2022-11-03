@@ -1,0 +1,42 @@
+(video 216)
+--------------------------------------------------------------------------------
+
+FUNÇÕES:
+--------
+
+Criar funções:
+O nome da função não pode começar com número (mas pode ter números no meio do nome), nem ter na string caracteres especiais, com exceção do underline.
+
+<?php
+
+	function nome_da_funcao () {
+
+		//código
+	}
+
+		//OU
+
+	function nome_da_funcao2 ( parametros ) {
+
+		//código
+	}
+
+
+?>
+
+-----------------------------------------------------------------------------
+2 tipos:
+	-com retorno
+	-sem retorno
+-----------------------------------------------------------------------------
+
+	//Aqui é definida um valor default caso não seja passado nenhum parâmetro
+	function exibir_profissao($profissao='trabalhador') { 
+		echo '<br /> Você atua como '.$profissao;
+	}
+
+	 exibir_profissao('programador'); -> 'Você atua como programador'
+
+	echo '<br /> <br />  Abaixo usamos o valor de parâmetro default da função:';
+	 exibir_profissao(); -> 'Você atua como trabalhador'
+

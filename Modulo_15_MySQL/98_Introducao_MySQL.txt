@@ -1,0 +1,107 @@
+(video 233 a 242)
+------------------------------------------------------------------------------------------
+
+SGBD - Sistema Gerenciador de Banco de Dados
+MySQL é um sistema SFBD relacional.
+------------------------------------------------------------------------------------------
+
+SQL - Structured Query Language (ou Linguagem de Consulta Estruturada)
+
+SQL: adotado como linguagem padrão de banco de dados relacionais existentes no mercado (PostgreSQL, SQLServer, Oracle, MySQL, ...).
+------------------------------------------------------------------------------------------
+
+Nome dos campos não aceitam caracteres especiais.
+------------------------------------------------------------------------------------------
+
+CRIANDO UMA TABELA:
+------------------
+
+CREATE TABLE tb_cursos (
+	id_curso int not null,
+	nome_curso varchar(100) not null,
+	resumo text null,
+	data_inicio date not null,
+	ativo_sn char(1) default 'S',
+	investimento float(8,2) default 0
+)
+
+id_curso vai ser do tipo int, e queremos que não seja nulo
+nome_curso terá tamanho máximo de 100 caracteres, e não poderá ser nulo
+resumo pode ser nulo,
+ativo_sn vai ter tamanho de 1 carctere, e começará por default com valor 'S'
+investimento: 8 será a quantidade de números que terá o nosso campo, e 2 o número de números que terá após a vírgula. Por default começará valendo 0.
+------------------------------------------------------------------------------------------
+
+ALTERAR O NOME DE UMA TABELA:
+-----------------------------
+
+RENAME TABLE tb_cursos TO novo_nome_q_queremos_atribuir
+
+------------------------------------------------------------------------------------------
+
+MANIPULAR TABELAS:
+------------------
+
+Incluir campo:
+-------------
+ADD: Permite a inclusão de um novo campo em uma tabela.
+ALTER TABLE tabela_cursos ADD COLUMN nome_do_campo VARCHAR(4) NULL;
+
+pode ser nulo (não é obrigatóri preencher o campo)
+
+
+
+
+Editar campo:
+------------
+CHANGE: Permite a alteração do nome do campo e suas propriedades, como por exemplo o tipo.
+ALTER table tabela_cursos change campo_que_queremos_modificar  campo_que_queremos_modificar_novo_nome int null;
+
+
+
+
+Editar campo:
+------------
+DROP: Permite remover um campo de uma tabela.
+
+alter table tabela_cursos drop nome_do_campo
+
+------------------------------------------------------------------------------------------
+
+
+INSERIR REGISTROS NA TABELA:
+---------------------------
+
+INSERT  into nome_da_tabela(ativo_sn, carga_horaria, data_inicio, id_curso, investimento, nome_curso, resumo) values('S', 22, '20190525', 2, 0, 'Curso Básico de HTML', 'APrenda a criar paginas HTML')
+
+
+------------------------------------------------------------------------------------------
+
+
+RECUPERAR DADOS DA TABELA:
+--------------------------
+
+select <campos> from tb_cursos
+
+Exemplo:
+select ativo_sn, carga_horaria, data_inicio, id_curso from tb_cursos
+
+select * from tb_cursos
+(Retorna todas as colunas da tabela)
+
+------------------------------------------------------------------------------------------
+
+QUAL A DIFERENÇA ENTRE CHAR E VARCHAR:
+-------------------------------------
+
+CHAR: sempre armazena o texto com tamanho fixo, mesmo que tenha que preencher com espaços vazios. 
+
+VARCHAR: Armazena o texto com o próprio tamanho deste texto, portanto, ocupa menos espaço em relação a CHAR.
+
+O CHAR possui pesquisa no mesmo mais rápidas, em relação à VARCHAR.
+
+------------------------------------------------------------------------------------------
+
+
+
+

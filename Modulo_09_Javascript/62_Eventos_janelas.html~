@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+	/* EVENTOS DAS JANELAS:
+	onload - quando termina o carregamento da página, quando é concluido o download de tudo
+
+	onresize 
+
+	*/
+
+//--------
+	function msgJanelaResize() {
+		document.write('vc redimensionou a janela<br />');
+	}
+//-------Se eu parasse o código aqui não seria executada a função. Ela só é processada caso elea seja chamada.
+	
+//--------
+
+
+	</script>
+  </head>
+  <body onload="alert('A pagina foi totalmente carregada.')" onresize="msgJanelaResize()">
+
+	<p></p>
+	
+	<br />
+
+
+  </body>
+</html>
+
+	 

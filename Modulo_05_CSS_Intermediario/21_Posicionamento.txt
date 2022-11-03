@@ -1,0 +1,14 @@
+(video 053 e 054)
+
+Já vimos como deixarmos margens e padding para os blocos, agora vamos aprender em como deixar distâncias de posicionamento dos blocos (AP: funciona para outros elementos além de blocos div?).
+AP: a propriedade position é aliada as propriedades top, right, bottom e left no sentido de elas darem as distâncias referenciais.
+
+exemplo:
+#pos_right {
+	position: fixed;
+	left: 20px;
+}
+
+------
+Criei um exemplo: 21_Posicionamento.html que parece ser mais ilustrativo do que ficar discorrendo e sendo prolixo.
+------

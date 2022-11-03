@@ -1,0 +1,44 @@
+(videos 125, 126) - Arquivos da pasta: 
+./49_Projeto_final/04_projeto-inicial-spotify-area-conteudo
+-------------
+Na hora de formatar as cores do h2 e h3 (que levam os textos abaixo:
+
+<h2>O que o Spotify tem?</h2>
+
+<h3>
+Músicas
+Playlists
+Novos lançamentos
+</h3>
+
+não precisa criar uma classe: .cor-roxa, e ir inserindo em cada h2 e h3, mesmo porque mais abaixo no documento teremos mais h2 e h3. Como esses h2 e h3 ficam dentro da (no html)
+
+    <!-- Conteudos -->
+    <section id="servicos">
+
+basta adicionar em estilo.css:
+
+#servicos h2, #servicos h3 {
+	color: #7c25f8;
+}
+
+-------------------------------------------------
+(video 126)
+No arquivo estilo.css:
+
+.rotacionar{
+	transform: rotate(30deg); /*Como rotacionar uma imagem em 30 graus */
+	-ms-transform: rotate(30deg); /* IE 9 */
+	-webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+
+	padding-left: 80px; /*para tirar a imagem de cima do texto */
+}
+-----------------
+body {
+	(...)
+	overflow-x: hidden; /*Oculta a barra horizontal gerada devido a rotação da imagem que gerou um overflow na horizontal. */
+}
+
+-----------------
+
+

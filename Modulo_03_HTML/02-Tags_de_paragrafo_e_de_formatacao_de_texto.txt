@@ -1,0 +1,26 @@
+
+(video 014) - Parágrafo
+<p> tag de parágrafo (gera quebra de linha no final) - é preciso fechar no final do paragrafo (</p>
+
+<h1> (tag de cabeçado, por isso o "h", vem de header) (AP: apesar de ser tag de cabeçalho vem dentro da tag <body> - digo isso pois tenho a dúvida se <head> é de cabeçalho?)
+
+<h1>  Título grande, maior que todos </h1>
+<h2> Título um tanto menor que o h1 </h2>
+<h3>   título menor ainda.... e assim sucessivamente </h3>
+...
+... <h6> também vale para diminuindo tamanho </h6>
+
+<h7> O h7 e h8,... não são tags de cabeçalho válidas, o texto nãõ segue a lógica de tamanhos das outras</h7>
+------------------
+o html não reconhece quebra de linha como \n, não quebra a linha - interpreta como espaço. Para quebra de linha  usa-se <br> (essa tag não precisa abrir e fecha, pode-se escrever também como 
+<br />).
+
+
+------------------------------
+(aula 015) - Tags para formatação de texto:
+
+negrito: <b>, mas não é usada mais como padrão no html, recomenda-se sua troca-se por <strong>
+
+itálico: <em>    (vem de emphasise)
+underline: <u>
+texto riscado/"texto errado": <strike>

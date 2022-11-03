@@ -1,0 +1,26 @@
+(video 267)
+-----------------------------------------------------------------------
+
+Recurso chamado "sessão":
+-------------------------
+
+No PHP, além das globais $_POST e $_GET, exite uma outra chamada $_SESSION, que fica ativa enquanto a instância estiver ativa no navegador.
+
+É preciso indicar que estamos trabalhando com seção (deve procurar ser o primeiro comando da página (não pode dar nenhum 'echo' ou 'print' antes desse comando)):
+
+session_start();  ///colocar isso no começo de todas páginas nas quais vai trafegar informação
+
+$_SESSION['usuario'] = $dados_usuario['usuario'];
+$_SESSION['email'] = $dados_usuario['email'];
+-----------------------------------------------------
+
+session_start();
+if (!isset($_SESSION['usuario'])) header("Location: index.php?erro=1"); //para não dar erro se ainda não foi criada a variável na $_SESSION e se tenta "de cara" entrar em home.php
+
+-----------------------------------------------------
+Apagar a variável da SESSION:
+//---Página "Sair.php":
+session_start();
+unset($_SESSION['usuario']);
+unset($_SESSION['senha']);
+

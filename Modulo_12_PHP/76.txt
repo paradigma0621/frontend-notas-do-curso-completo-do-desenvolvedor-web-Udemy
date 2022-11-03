@@ -1,0 +1,44 @@
+(video 189, 191, 192, 193)
+----------------
+
+(video 189)
+PHP oferece as possibilidades de executar scripts tanto em
+server-side como em client-side (PHP GTK). Pode executar também linhas de
+comando (sh (linux) ou cmd (DOS)).
+
+Paradigma estrutural e ou OO (Orientação à objetos).
+
+-----------------------------------------
+
+(video 191)
+
+Tag padrão
+<?php meu código ?>  (Habilitada no momento de instalação do PHP)
+
+
+Tag de impressão
+<?= meu código ?>  (Habilitada no momento de instalação do PHP)
+
+Tag curta
+<? meu código ?> (Não habilitada no momento da instalação do PHP)
+
+Obs:AP: Eu fiz o teste no meu pc desses 3 tipos de tag, sendo que só funcionou em exibir algo apenas quando a página tinha apenas a Tag padrão, se tinhas as outras 2 tags junto carregava página em branco.
+-------------------------------------
+(video 192)
+Praticamente não há diferenças entre usar "echo" ou "print":
+	<?php
+		echo 'teste do echo <br />';
+		print 'essa eh uma msg exibida com print <br />';
+		print('essa eh uma msg exibida com print com parenteses <br />');
+	?>
+-------------------------------------
+(video 193)
+Comentários no PHP:
+
+//comentário de uma única linha
+
+#comentário de uma única linha no estilo shell
+
+/*comentário de
+várias linhas
+que pode conter muitas palavras */

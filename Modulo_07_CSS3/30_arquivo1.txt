@@ -1,0 +1,5 @@
+(video 079)
+
+Ocorre diferença de visualização de formatos de estilos de páginas que usam CSS 3 em diferentes browsers. Para minimizar essas diferenças basta incluir um arquivo chamado "normalize.css" nas páginas. Esse arquivo se encontra na pasta "anexos".
+
+Para confirmar a diferença de formatação em diferentes browsers basta carregar o arquivo 30_normalize.html em diferentes navegadores.

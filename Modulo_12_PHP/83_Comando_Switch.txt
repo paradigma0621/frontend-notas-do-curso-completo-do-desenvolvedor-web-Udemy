@@ -1,0 +1,29 @@
+(video 206)
+---------------------------------------------------------------------------------------
+
+SWITCH: Faz a operação lógica de igualdade ==
+-------
+A forma do switch traz uma clareza melhor do que está sendo feito em comparação se usassemos só IF (como por exemplo atribuindo ações quando se está trabalhando com um menu).
+
+<?php
+	$opcao = 2;
+
+	switch ($opcao) {
+		case '1':
+			echo 'primeiro case';
+			break;
+		case '2':
+			echo 'segundo case';
+			break;
+
+		case '3':
+			echo 'terceiro case';
+			break;
+
+		//(...)
+
+		default: //quando não existe um case válido. Default é opcional.
+			echo 'case default';
+			break;
+	}
+?>

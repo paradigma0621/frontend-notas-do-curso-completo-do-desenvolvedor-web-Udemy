@@ -1,0 +1,48 @@
+(video 276) (+- 5min:45s pra frente)
+-----------------------------------------------------------------------
+
+	No video 276 ele apresentou um recurso do HTML5 muito importante para passar informações de uma página à outra: 
+usando uma "data-X" (um atributo customizado)
+
+
+
+data-X=$valor
+
+------------------------
+para ficar mais fácil de entender (pois ali em cima eu coloquei o código final do projeto), ele usou um passou intermediário:
+echo '<button type="button" class="btn btn-default btn_seguir" data-id_usuario="10">Seguir</button>';
+quando ele clica na outra página para seguir alguém (na página procurar_pessoas.php), ele pode ler o data-id_usuario="10" escrito nessa página (get_pessoas.php)
+--------------------
+
+
+
+no arquivo 'get_pessoas.php' ele usou o atributo  data-id_usuario="'.$pessoa['id'].' para passar informação para dentro do jQuery no arquivo: procurar_pessoas.php
+
+echo '<button type="button" class="btn btn-default btn_seguir" id="seguir_'.$pessoa['id'].'" data-id_usuario="'.$pessoa['id'].'" style="display:'.$btn_seguir_display.'">Seguir</button>';
+
+echo '<button type="button" class="btn btn-primary btn_deixar_seguir" id="deixar_seguir_'.$pessoa['id'].'" data-id_usuario="'.$pessoa['id'].'" style="display:'.$btn_deixar_seguir_display.'"> Deixar de seguir</button>';
+
+====
+Dentro de procurar_pessoas.php ele recebe a informação de data-id_usuario (que ele passou como sendo ="'.$pessoa['id'] ali em cima)
+
+
+$('.btn_seguir').click( function(){
+
+	var id_usuario = $(this).data('id_usuario');  //***aqui recupera o valor passado pela outra página
+
+
+	$('#seguir_'+id_usuario).hide();
+	$('#deixar_seguir_'+id_usuario).show();
+
+	$.ajax({
+		url: 'seguir.php',
+		method: 'post',
+		data: {seguir_id_usuario : id_usuario},
+		success: function(data){
+		}
+
+	});
+}); 
+
+
+

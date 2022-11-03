@@ -1,0 +1,26 @@
+(video 199)
+--------------------------------------------------------------------------------
+
+(video 199) - GET
+-----------------------------------
+
+<form role="form" action="80_Catalogo_Produtos_GET.php" method="get">
+
+Vai passar para essa mesma pagina a informação.
+
+Operações simples pode fazer com method get, mas com informações sigilosas não.
+
+----------------------------------
+O valor de "value" abaixo que vai ser passado pelo GET
+<select class="form-control" name="id_produto" id="id_produto">
+    	<option value="1">Cadeira</option>
+	<option value="2">Fogão</option>
+	<option value="3">Roteador wi-fi</option>
+	<option value="4">TV 29"</option>
+</select>
+----
+de modo que ele vai ser recebido e resgatado com:
+	$oQueEscolheu = $_GET['id_produto'];
+
+e mostrado na tela com:
+	echo $detalhe[$oQueEscolheu];

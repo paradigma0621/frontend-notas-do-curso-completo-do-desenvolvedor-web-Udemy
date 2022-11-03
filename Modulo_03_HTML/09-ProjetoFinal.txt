@@ -1,0 +1,11 @@
+(video 27) - projeto final
+
+O layout geral é feito usando estrutura <table> (tabela), que, apesar de não ser a forma mais recomendada para um desenvolvimento moderno, neste ponto do nosso conhecimento é algo aceitável.
+
+---------------------------------------------
+preencher conteúdo dos site com textos gerados pelo site: lorem ipsum
+https://www.lipsum.com/
+--------------------------------------
+
+O projeto final está salvo em:
+./curso-completo-do-desenvolvedor-web-ANOTACOES_AP/Modulo_02/projeto final

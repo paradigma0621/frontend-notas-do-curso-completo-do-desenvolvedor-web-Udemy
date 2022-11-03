@@ -1,0 +1,21 @@
+(video 113)
+
+É preciso carregar o jQuery e escrever um código de javascript para inicializar os componentes:
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip() //aqui inializa a ação de aparecer tooltip
+        $('[data-toggle="popover"]').popover() //aqui inializa a ação de aparecer popover
+      })
+
+---------------------------------
+O atributo (data-placement="right") (ou "left", etc) é opcional tanto no tooltip quanto no popover
+---------------------------------
+Tanto o tooltip como o popover tem propriedades muito interessantes para se ler na internet.
+Por exemplo em:
+https://getbootstrap.com/docs/3.4/javascript/
+no menu à direita.

@@ -1,0 +1,50 @@
+(video 220, 221)
+--------------------------------------------------------------------------------
+
+FUNÇÂO "ISSET":
+--------------
+	Verifica se a variável foi iniciada. Ex:
+	
+	isset($variavel)
+
+	Retorna true ou false.
+	Obs: se uma variável é iniciada com valor "null", ela também é entendida pelo isset como não iniciada.
+
+--------------------------------------------------------------------------------
+
+FUNÇÂO "EMPTY":
+--------------
+	Verifica se uma variável está vazia. Quando ela é retorna true quando:
+		Quando é uma string vazia;
+		Quando valer como inteiro igual a zero;
+		Quando for uma string que contem apenas o caractere zero ('0');
+		Quando for false;
+		Quando for nulo;
+		Quando for um array vazio (array());
+	
+	Retorna false para qualquer outro caso.
+
+	empty($variavel)
+
+	Retorna true ou false.
+
+
+--------------------------------------------------------------------------------
+
+FUNÇÂO "IS_NUMERIC":
+-------------------
+
+	Testa se a variável é um número ou uma string numérica.
+	Retorna true ou false.
+	
+	is_numeric($variavel)
+
+	Exemplos:	
+	if is_numeric('abc')->false
+	if (is_numeric(120)->true
+	if is_numeric('120')->true
+	if is_numeric('120.30')->true
+
+--------------------------------------------------------------------------------
+
+

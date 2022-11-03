@@ -1,0 +1,75 @@
+(videos 209, 210, 211, 212)
+---------------------------------------------------------------------------------------
+
+ESTRUTURAS DE REPETIÇÃO:
+------------------------
+Há quatro:
+
+	while
+	do while
+	for 
+	foreach
+
+----------------------------------------------------------------------------
+
+1.WHILE
+-----
+
+<?php
+
+	while(condicao) {
+
+		if (condicao2) break;
+
+	(...)
+		if (condicao3) continue;
+				//usando "continue", cuidado para não criar loop infinito
+				//observar se a interação vem antes do if (condicao3)
+				//ex: while ($num<10) { if ($num<3) continue;
+				//		$num++;  //podemos ver aqui q há loop infinito
+	}
+
+?>
+----------------------------------------------------------------------------
+
+2. DO WHILE
+-----------
+O bloco de códigos é executado pelo menos uma vez - se vai repetir ou não ele vê depois.
+Também se aplica à esse operatodor 'break' e 'continue'.
+<?php
+
+	do {
+
+		(...)
+
+	} while (condicao);
+
+
+
+//exemplo:
+	do {
+		echo 'Teste ok';
+	} while (false);
+		//Imprime 'Teste ok' uma vez na tela
+?>
+
+----------------------------------------------------------------------------
+(video 212)
+
+3. FOR
+--------
+Se aplicas aqui também 'break' e 'continue'.
+Também é mais legível a intenção do laço, em relação se fossemos talvez usar o while por exemplo.
+ 
+<?php
+
+	for (variavel;condicao;incremento) {
+
+		(...)
+
+	}
+
+?>
+
+----------------------------------------------------------------------------
+

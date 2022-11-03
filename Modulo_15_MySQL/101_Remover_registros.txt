@@ -1,0 +1,25 @@
+(video 248)
+------------------------------------------------------------------------------------------
+(Executar os comandos dados no arquivo: 99_tb_pessoas.txt)
+
+EXCLUINDO REGISTROS:
+--------------------
+
+delete from <tabela> where <condicao>
+
+------------------------------------------------------------------------------------------
+
+delete from tb_pessoas  -> APAGA TODO MUNDO (CUIDADO)
+
+delete from tb_pessoas where id = 5 
+
+-----------------
+select * from tb_pessoas where idade=20 and interesse = 'Esporte' (PARA VER QUEM TEM ESSA CARACTERISTICA)
+delete from tb_pessoas where idade = 20 and interesse = 'Esporte'
+-----------------
+
+select * from tb_pessoas where estado = 'SP' and idade < 30
+delete from tb_pessoas where estado = 'SP' and idade < 30
+-----------------
+
+Na prática, nós não removemos os registros, mas sim fazemos uma atualização de status.

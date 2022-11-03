@@ -1,0 +1,24 @@
+(video 276 (+-15:00)
+--------------------------------------------------------------------------------------------
+
+passar informação de uma página à outro usando ajax:
+
+arquivo procurar_pessoas.php:
+
+
+	$('.btn_seguir').click( function(){
+
+		var id_usuario = $(this).data('id_usuario');
+
+		$('#seguir_'+id_usuario).hide();
+		$('#deixar_seguir_'+id_usuario).show();
+
+		$.ajax({   				 //------------------------********------------ É daqui pra baixo que eu estou interessado---------------*****-------
+			url: 'seguir.php', 		// vai carregar essa página
+			method: 'post',
+			data: {seguir_id_usuario : id_usuario},		//passando a informação id_usuario através da variável seguir_id_usuario - obs: vai passar essa informação pelo post
+			success: function(data){
+			}
+
+		});
+	});

@@ -1,0 +1,80 @@
+(video 096)
+
+O que tem de novo nessa aula é que apareceu:
+    
+   	<div class="container">
+   		
+   		<div class="page-header">
+   			<h1>Formulário bootstrap</h1>
+   		</div>
+
+Ou seja:
+	-Escrevemos nossa página sempre dentro do "container", e definimos
+um cabeçalho "page-header", que vai ser formatado pelo Bootstrap.
+---------------------------
+Os campos dos formulários
+são estilizados e possuem animações
+quando se clica neles.
+--------------------------   
+		
+   		<div class="form-group">
+   			<h1>Formulário bootstrap</h1>
+   		</div>
+
+agrupa elementos de um formulário
+
+---------------------------
+
+   		<div class="form-group">
+   			<label for="nome">Nome</label>
+   			<input type="text" class="form-control" id="nome">
+   		</div>
+
+		<div class="form-group">
+			<label for="email">E-mail</label>
+			<input type="email" class="form-control" id="email">
+		</div>
+			(...)
+
+<label> inseri labels como as das outras linguagens (ex: Qt (C)):
+	<label>Nome</label>  faz isso, mas sem ação quando se clica na label
+
+for="nome" com o mesmo nome dentro do input text garante que quando se clica
+na label "Nome" ele posiciona o cursor no input nome
+
+ class="form-control" traz formatação e animação quando se clina no 
+formulário (no campo de texto "nome")
+---------------------------------
+   	<div class="checkbox">
+   		<label>
+   			<input type="checkbox"> Aceito os termos do serviço.
+   		</label>
+   	</div>
+
+coloca o type="checkbox" dentro do label, nisso difere dos exemplos 
+anteriores.
+-----------------------------
+
+  <div class="radio">
+  	<label>
+  		<input type="radio" name="opcoes"> PHP
+ 	</label>
+
+	<label>
+		<input type="radio" name="opcoes"> Java
+	</label>
+
+   </div>
+
+----------------------------------
+<button type="submit" class="btn btn-default">Cadastrar</button>
+esse botão tem propriedade diferentes do usual do html.
+----------------------------------
+
+<div class="form-group">
+	<input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">   				
+</div>
+
+<div class="form-group">
+	<input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+</div>

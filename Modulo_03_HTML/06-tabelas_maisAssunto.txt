@@ -1,0 +1,89 @@
+(video 21) - Tabelas (mais coisas)
+
+tag <table> -  tem abertura e fechamento (</table>)
+---------------------------------
+usa o atributo: width (em número de pixels)
+
+<table border="1" width="400">  
+tabela
+</table>
+---
+ou:
+<table border="1" width="100%">  
+tabela
+</table>
+
+Assim a tabela ocupa 100% do espaçamento da largura da página do navegador.
+
+
+ou com 2 célular na mesma linha:
+<table border="1"> 
+	<tr>
+		<td>aa</td>
+		<td>bb</td>
+	</tr>
+</table>
+
+--------------------------------
+<td colspan="2">: mescla as 2 células das colunas
+<td rowspan="2">: mescla as 2 células das linhas
+
+exemplo:
+<table border="1" width="100%"> 
+	<tr>
+		<th>Código</th>
+		<th>Produto</th>
+		<th>Preço</th>
+	</tr>
+
+	<tr>
+		<td>codigo1</td>
+		<td>produto1</td>
+		<td>R$100,00</td>
+	</tr>
+
+	<tr>
+		<td>codigo2</td>
+		<td>produto2</td>
+		<td>R$200,00</td>
+	</tr>
+
+	<tr>
+		<td colspan="2">Total</td>
+		<td>R$300,00</td>
+	</tr>
+
+	<tr>
+		<td rowspan="2">Desconto</td>
+		<td>Cupom1: R$50,00</td>
+	</tr>
+
+	<tr>
+		<!-- essa linha nao precisa 
+			por causa do rowspan da linha de cima<td>aa</td> -->
+		<td>Cupom2: R$25,00</td>
+	</tr>
+</table>
+
+
+
+
+.
+.
+.
+
+
+
+
+----------------------------------------
+Dentro do video 027 ele apresenta um novo atributo para tabela: align
+
+<table border="1" width="900" align="center">
+
+também é possível atribuir align as células da tabela: 
+	<tr>
+		<td align="right">Desconto</td>
+		<td>Cupom1: R$50,00</td>
+	</tr>
+
+

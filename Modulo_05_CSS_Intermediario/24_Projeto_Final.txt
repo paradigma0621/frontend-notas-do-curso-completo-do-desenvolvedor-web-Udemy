@@ -1,0 +1,51 @@
+(video 063)
+Ver pasta: "24_Projeto_Final"
+
+A primeira coisa que ele fez no arquivo de estilo .css foi:
+-------
+/*Limpar formatações padrão*/
+* {
+	margin: 0;
+	padding: 0;
+}
+------
+
+Isso porque os objetos <p>, <h1>, etc, já vem com um estilo para cada browser diferente, podendo ser apresentado diferente de um para outro conforme o usuário. Para garantir uniformidade limpamos a formatação com esse código.
+
+---------------------------------------------------
+---------------------------------------------------
+
+
+
+
+a única coisa que ele fez que eu não tinha entendido foi colocar um 
+"display: block" na folha de estilo .css
+
+------------------------------ESTILO.CSS------------------
+.data-postagem {
+	font-size: 14px;
+	border-bottom: 1px solid #f4f4f4;
+	display: block;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+(...)
+
+.postado {
+	border-left: 5px solid #d8d8d8;
+	padding-left: 5px;
+	display: block;
+	margin-top: 10px;
+}
+
+----------------------------------------------------------------
+O código que faz uso desse estilo está em:
+---------------------------INDEX.HTML-----------------------------
+<span class="postado">Postado por Jamilton Damasceno</span>
+</div>
+(...)
+<span class="data-postagem">postado em 12 março 2015</span>
+-----------------------------------------------------------------
+
+A idéia de ele fazer isso, como vi em outro video, é que span é inline, e inline não permite especificar noções de espaçamento (width, height, ...). Fazendo isso podemos atribuir propriedade de espaçamentos para o span como se ele fosse um bloco.

@@ -1,0 +1,4 @@
+
+Para carregar a página é preciso colocar os arquivos do site dentro do servidor do 127.0.0.1, e carregala de dentro do servidor.
+
+

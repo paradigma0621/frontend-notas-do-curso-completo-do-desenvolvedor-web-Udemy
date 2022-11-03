@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Posicionamento</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			
+			body{
+				background: #61bd8c;
+			}
+
+			#conteudo-principal{
+				background: #F00F0F;
+				padding: 10px;
+				width: 600px;
+				margin: 30px auto;
+				margin-top: 120px;
+				height: 3000px;
+				/*position: relative;*/
+			}
+
+
+			#relativo{
+				position: relative;
+				color: #000000;
+				background: #1e6f44;
+				left: -90px;
+				top: 0;
+				width: 660px
+			}
+
+			#absoluta{
+				color: #000000;
+				position: absolute;
+				background: #2e6f74;
+				/*bottom: 0;*/
+				height: 270px;
+				width:90px;
+				/*right: 30px;*/
+			}
+
+			#fixo{
+				position: fixed;
+				color: #000000;
+				background: #3e6544;
+				top: 20px;
+				left: 50px;
+				height: 100px;
+				width: 100%;
+				background: #B0A0C10;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="conteudo-principal">
+			<h1>Posicionamento, devido a sua propriedade margin ser auto, posso dar resize na tela que mesmo assim o bloco fica centralizado</h1>
+
+			<h3> Relativo</h3>
+			<div id="relativo"><h2>Relative</h2></div>
+
+			<h3> Absolute. Até aqui, conforme formos acrescentando texto, a extenção do div conteudo-principal vai crescendo.</h3>
+			<div id="absoluta">Absolute - perceber que deixou de fazer parte do conteudo da id conteudo-principal</div>
+
+			<div id="fixo">Fixed... perceba que ao rolar a tela para baixo, esse block permanece fixo, ou seja, é ideal para algo do tipo menu.</div>
+		</div>
+	</body>
+
+</html>

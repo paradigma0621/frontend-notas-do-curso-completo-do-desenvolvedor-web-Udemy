@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<HTML lan="pt-br">
+<HEAD>
+	<meta charset="UTF-8">
+	<TITLE>Ajax fácil com JavaScript puro</TITLE>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	
+	<script laguage="javascript">
+		
+		var httpRequest;
+
+		function fazerRequisicao(url, destino) {
+
+                    document.getElementById(destino).innerHTML = '<center><img src="loader.gif"></center>';
+		
+			if (window.XMLHttpRequest) {
+				httpRequest = new XMLHttpRequest();
+				            
+			} else if (window.ActiveXObject) {
+				try {
+					
+					httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+			        } catch (e) {
+  				             try {
+				                    return new ActiveXObject("Microsoft.XMLHTTP");
+				          		  } catch (e) {
+												 alert('Impossível instanciar o objeto xmlhttprequest para este navegador/versão');
+									}
+					}
+			}
+
+			
+			if (!httpRequest) { 
+				alert('Erro ao tentar criar uma instância do objeto XMLHTTPREQUEST');
+				return false;
+				}
+		//alert('URL: '+url);
+		httpRequest.onreadystatechange = situacaoRequisicao;
+
+		httpRequest.open('GET', url);
+		httpRequest.send();
+
+		
+		}
+
+	function situacaoRequisicao() {
+  		
+            //Verificamos se o "readyState" é "4" (requisição finalizada)
+            if (httpRequest.readyState == 4) {
+                //Verificamo o "status"
+                if (httpRequest.status == 200) {
+                    //Se o status for 200, tudo OK !
+                    document.getElementById('div_conteudo').innerHTML = httpRequest.responseText;
+                } else {
+                    //Se não for 200, problemas !
+                    alert('deu erro - status: '+httpRequest.status); //Erro !
+                }
+            }
+      
+
+	}	
+
+	
+</script>
+
+</HEAD>
+
+<BODY>
+
+<div class = "container">
+
+	<div class="row">
+		<div class="col-md-4 center"></div>
+
+		<div class="col-md-4 center">
+			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pag1.html', 'div_conteudo')">Página 1</a>
+			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pag2.html', 'div_conteudo')">Página 2</a>
+			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pag3.html', 'div_conteudo')">Página 3</a>
+		</div>
+
+		<div class="col-md-4 center"></div>
+	</div>
+</div>
+
+<br />
+<div class = "row">
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10" id="div_conteudo"></div>
+
+	<div class="col-md-1"></div>
+</div>			
+
+</BODY>
+</html>

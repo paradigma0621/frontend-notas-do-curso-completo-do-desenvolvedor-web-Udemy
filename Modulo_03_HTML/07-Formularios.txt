@@ -1,0 +1,87 @@
+(video 22) - Formulários
+tag <form> -  tem abertura e fechamento (</form>)
+---------------------------------
+tag <input>, não tem tag de fechamento... coloca-se então: <input ... /> 
+
+argumento: type="text" , precisa de outro ainda: "name", a partir do qual enviamos o valor preenchido dentro dos campos para algum tratamento, quando apertamos o botão "submit" por exemplo.
+
+	ou
+argumento: type="password" , precisa de outro ainda: "name", a partir do qual enviamos o valor preenchido dentro dos campos para algum tratamento.
+
+	
+	ou
+
+argumento: type="button" , esse argumento precisa de outro argumento "value_que_leva_o_label"
+
+	ou
+
+argumento: type="submit" , esse argumento precisa de outro argumento "value_que_leva_o_label"... ao clicar nesse botão os dados do formulário são enviados para processamento... isso quando é apertado o botão do tipo submit - (ap: com o button não é automático esse envio através da URL). Lembrar que quando for passar a name senha é preciso fazer algo, e não passar ela "seca" (encriptar?).
+
+	ou
+
+argumento: type="radio" , esse argumento precisa de outro argumento "name", que vai incluir no mesmo grupo "names" de mesmo nome
+
+	ou
+
+argumento: type="checkbox"
+
+---------------------------------
+
+tag <select>: permite fazer uma lista de opções da qual selecionamos uma
+dentro dessa tag vai outra tag: <option> (precisa ser fechada depois)
+
+
+---------------------------------
+
+tag <textarea>: permite fazer uma caixa de texto um pouco maior (precisa ser fechada depois)
+
+
+--------
+Para resgatar a ação sobre cada um desses componentes é preciso uma linguagem deprogramação.
+
+--------Exemplo:
+<form>	<h1> Cadastro </h1>
+	Login: <br />
+	<input type="text" name="login"/> <br />
+	Password: <br />
+	<input type="password" name="senha"/> <br />
+
+	<input type="button" value="TextLabelLogin"/> 
+	<input type="submit" value="TextLabelSubmit"/>  
+
+	<br />
+	<input type="radio" name="sexo"/> Masculino<br />
+	<input type="radio" name="sexo"/> Feminino<br />
+	
+	<h2>Interesses</h2>	 
+	<input type="checkbox"> Futebol<br />
+	<input type="checkbox"> Cursos<br />		 
+	<input type="checkbox"> Eletrônicos <br />
+
+	<h3> Estado <h3/>
+	<select>
+		<option>SP</option>
+		<option>PR</option>
+		<option>SC</option>
+		<option>RS</option>
+		<option>RJ</option>
+	</select>
+
+	<br />
+	Observações: <br />
+	<textarea> </textarea>
+	<br />
+ 
+	<input type="button" value="TextLabelCadastrar"/> 
+
+</form>
+usa o atributo: width (em número de pixels)
+
+<table border="1" width="400">  
+tabela
+</table>
+---
+ou:
+<table border="1" width="100%">  
+tabela
+</table>

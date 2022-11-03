@@ -1,0 +1,55 @@
+(video 202, 203, 204, 205, 207 e 208)
+---------------------------------------------------------------------------------------
+
+OPERADORES:
+-----------
+
+		if (2 == 2) {} //Igual? true
+	
+		if (2 === '2') {} //Idêntico? false
+	
+		if (2 != 1) {} //Diferene? true
+		if (2 <> 1) {} //Diferente? true
+
+		if ('y' == 'x') {} //false
+	
+		if (2 !== 2) {} //são diferentes ou de tipo diferente? R: false
+
+		if (2 !== 5) {} //são diferentes ou de tipo diferente? R: true
+
+		if (2 !== '2') {} //são diferentes ou de tipo diferente? R: true
+
+	
+
+---------------------------------------------------------------------------------------
+(videos 204 e 205)
+
+OPERADORES LÓGICOS:
+-------------------
+
+&& (ou) AND
+	if (($x==3)&&($y<2)) { } 
+	if (($x==3)AND($y<2)) { } 
+
+|| (ou) OR
+	if (($x==3)||($y<2)) { } 
+	if (($x==3)OR($y<2)) { } 
+
+XOR: verdadeiro apenas se uma das expressões for verdadeira. Se as duas forem veradeiras, ou se as duas forem falsas retorna falso.
+	if (($x==3)XOR($y<2)) { } 
+
+! negação
+
+---------------------------------------------------------------------------------------
+(videos 207 e 208)
+
+OPERADORES ARITMÉTICOS:
+------------------------
++
+-
+*
+/
+% -> Módulo (resto) de uma divisão   ( 7%3 =1), (9%5 = 4), (9 % 3 = 0)
+
+
+

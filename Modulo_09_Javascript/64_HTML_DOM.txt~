@@ -1,0 +1,15 @@
+O que é DOM?
+	Document Object Model
+	API que permite o acesso via javascript aos elementos da página
+
+----------
+O que pode ser feito com a DOM? R: Alguns exemplos: 
+	alterar a cor de fundo de uma div
+	apresentar ou esconder uma tabela
+	imagem pode ser modificada
+
+-----------
+
+Manipulando elementos (node):
+	método document.getElementByID(id)
+

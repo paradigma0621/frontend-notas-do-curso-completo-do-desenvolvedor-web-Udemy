@@ -1,0 +1,45 @@
+(video 265)
+-----------------------------------------------------------------------
+A linha
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+deve ficar no final do arquivo, se não pode dar erro.
+
+-----------------------------------------------------------------------
+
+
+Conectar-se a um banco de dados utilizando PHP:
+----------------------------------------------
+public function conecta_mysql(){
+	$con = mysql_connect($this->host, $this->user, $this->password) or die("Erro ao conectar ao servidor: ".mysql_error());
+	mysql_select_db($this->database) or die("Erro ao selecionar o banco de dados: ".mysql_error());
+	mysql_query("SET NAMES 'utf8'"); //Formato das transações de informação
+	mysql_query("SET character_set_connection=uf8");//Formato das transações de informação
+	mysql_query("SET character_set_client=uf8"); //Formato das transações de informação
+	mysql_query("SET character_set_results=uf8"); //Formato das transações de informação
+
+	return $con;
+}
+
+
+-----------------------------------------------------------------------
+
+
+
+
+Inserir informações em um banco de dados utilizando PHP:
+-------------------------------------------------------
+$objBd = new bd();  //Ver arquivo "bd.class.php" = classe de conecção de banco de dados
+$objBd->conecta_mysql();
+//"usuarios" é o nome da tabela. Dentro dessa tabela tem os campos: usuario, email e senha
+$sql = " insert into usuarios(usuario, email, senha)values('$usuario', '$email', '$senha') ";
+
+if(mysql_query($sql)){
+	echo 'Usuário foi registrado com sucesso!';
+} else {
+	echo 'Erro ao tentar inserir o registro';
+}
+
+
+
+

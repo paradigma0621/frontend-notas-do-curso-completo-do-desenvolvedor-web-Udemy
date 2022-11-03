@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Jogo</title>
+		<!-- jquery -->
+		<script src="jQuery/jquery-3.4.1.js"></script>
+
+
+		<script type="text/javascript">
+
+
+			$(document).ready( function() {
+					
+/*
+.keydown()
+.keypress() //não captura ALT, CRTL, SHIFT, ESC, ...
+.keyup()
+
+	$('#campo1').funcao();
+*/
+				$('#campo1').keydown( function() {
+					alert('tecla pressionada down');
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+		<input id="campo1" type="text">
+	</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+document.write('esta carregando a página <br />');
+	
+//--------
+	function calculaArea(largura, comprimento) {
+	 //"largura" e "comprimento" chamam argumentos ou PARÂMETROS
+		var area = largura * comprimento;
+document.write('a: ' + area);
+		return area; //não é obrigatório que uma função retorne uma variável
+	}
+//-------Se eu parasse o código aqui não seria executada a função. Ela só é processada caso elea seja chamada. Obs: a função não tem necessáriamente que aparecer antes de ser chamada, ela pode ser colocada no fim do código.
+
+	document.write('a area de 2x3 = '+ calculaArea(2,3));
+
+	document.write('<br /> <br />');
+
+
+	document.write('a area de 4x5 = '+ calculaArea(5,5));
+
+	var areaRetangulo = calculaArea(6,15);
+
+	</script>
+
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html>
+
+	 

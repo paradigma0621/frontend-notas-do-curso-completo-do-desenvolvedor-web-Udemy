@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>Página principal</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.estiloPer {
+			color: #40FF00;
+			font-size: 70px;
+			font-family: Helvetica, "Trebuchet MS", sans-serif;
+		}
+
+	</style>
+</head>
+
+<body>
+	<p class="estiloPer">
+		conteúdo de texto
+	</p>
+</body>
+
+</html>
+

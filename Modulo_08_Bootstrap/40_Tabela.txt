@@ -1,0 +1,53 @@
+(video 098)
+
+O que tem de novo nessa aula é que apareceu:
+    
+<thead>: table head - cabeçalho da tabela
+<tr>: table row - linha da tabela
+<th>: table header - itens de cabeçalho de cada tabela
+
+<tbody>: table body
+<td>: table data - conteúdo da tabela
+----------------------
+Antigamente usava-se tabela para definir layout de uma página. Atualmente
+temos outros componentes para fazer isso: grid, por exemplo.
+------------------------
+Fazendo uma tabela seca, apenas com o fato de se adicionar:
+	<table class="table">
+já formata bastante a tabela. O professor do curso disse que ela passou a 
+responsiva, mas AP: será que não era também sem o bootstrap?
+-----------------
+<table class="table table-striped"
+esse "table-striped" faz com que linha sim, linha não venha um tom de cor de
+fundo nas linhas da tabela.
+-----------------
+<table class="table table-striped table-bordered" 
+esse "table-bordered" faz com que surja bordas na tabela.
+-----------------
+<table class="table table-striped table-bordered table-hover" 
+esse "table-hover" faz com que quando se passe o mouse por cima das linhas
+elas adquirem uma tonalidade.
+-----------------
+<table class="table table-striped table-bordered table-condensed">
+esse "table-condensed" faz com que que diminua o padding interno da tabela.
+
+
+----------------------
+
+Para colorir elementos/linhas da tabela:
+<tr class="success"> /*colori a linha inteira*/
+<td class="warning">HP Pavillon</td> /*colori o elemento da tabela*/
+
+cores:
+class= "success"
+class="warning"
+class="danger"
+class="info"
+...
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+(video 074)
+
+podemos escrever atributos customizados como "meuatributo" abaixo:
+<li class="item" meuatributo="123">Mariana Godoy</li>
+
+porém, o recomendado é que se utiliza "data-..."
+
+é possível usar quantos atributos customizados se queira. Exemplo:
+<li class="item" data-idade="23" data-altura="177"...>Mariana Godoy</li>
+
+------------
+usamos o atributo customizado para recuperar informação futuramente com o javascript.

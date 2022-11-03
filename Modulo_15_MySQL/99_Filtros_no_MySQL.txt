@@ -1,0 +1,23 @@
+(video 243, 245 e 246)
+------------------------------------------------------------------------------------------
+
+FILTROS:
+-------
+Executar os comandos dados no arquivo: 99_tb_pessoas.txt
+
+select * from tb_cursos where investimento < 50.00
+------------------------------------------------------------------------------------------
+
+OPERADORES: <, > e =, <=, >=
+OPERADORES LÓGICOS: and, or
+
+select * from tb_cursos where investimento < 50.00 and id_curso > 3
+------------------------------------------------------------------------------------------
+
+select * from `tb_pessoas` where idade < 39 and estado = 'MG'
+
+select * from `tb_pessoas` where idade < 39 and estado = 'MG' and interesse = 'Jogos'
+
+select * from `tb_pessoas` where estado = 'SP' or estado = 'BA'
+
+------------------------------------------------------------------------------------------

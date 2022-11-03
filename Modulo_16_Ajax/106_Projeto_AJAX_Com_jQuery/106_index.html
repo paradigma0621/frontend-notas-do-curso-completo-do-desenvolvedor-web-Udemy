@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<HTML lan="pt-br">
+<HEAD>
+	<meta charset="UTF-8">
+	<TITLE>Ajax fácil com jQuery</TITLE>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script laguage="javascript">
+		
+	$(document).ready( function () {
+	
+		$('.btn_carrega_conteudo').click(function() {
+			var carrega_url = this.id;
+			carrega_url = carrega_url + '.html';			
+				//alert('url: '+carrega_url);
+	
+            $.ajax
+            ({
+                    url: carrega_url, //Qual página o ajax ira buscar 
+                    beforeSend: function(){//Chama a função para mostrar a imagem gif de loading antes do carregamento
+                       //             alert('vai carregar');
+                       		$('#loaderImg').css({display: "block"});
+                    },
+                    success: function(data) //Em caso de sucesso da função .ajax ele retornara para a var retorno
+                    {
+                    	//$('#div_conteudo').html('abcsodp');
+                    	$('#div_conteudo').html(data);
+                    },
+
+                    complete: function() {
+                       		$('#loaderImg').css({display: "none"});
+                    },
+                    //Aqui poderiamos programar uma execeção, um tipo de retorno caso tenhamos falha na exception função .ajax
+                    error: function(error)
+                    {/*
+                        
+                        */
+                    }
+                });
+		});
+	});
+
+
+</script>
+
+</HEAD>
+
+<BODY>
+
+<div class = "container">
+
+	<div class="row">
+		<div class="col-md-4 center"></div>
+
+		<div class="col-md-4 center">
+			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pag1")">Página 1</a>
+			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pag2")">Página 2</a>
+			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pag3")">Página 3</a>
+		</div>
+
+		<div class="col-md-4 center"></div>
+	</div>
+</div>
+
+<br />
+<div class = "row">
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10" id="div_conteudo">
+		<center><img src="loader.gif" style="display: none" id="loaderImg"></center> <!-- A imagem fica na pagina, mas invisivel. Se alguem clica para carregar página o jQuery mostra ela na função beforeSend, e depois na seção "complete" ele vola a esconder o gif -->
+	</div>
+
+	<div class="col-md-1"></div>
+</div>			
+
+</BODY>
+</html>

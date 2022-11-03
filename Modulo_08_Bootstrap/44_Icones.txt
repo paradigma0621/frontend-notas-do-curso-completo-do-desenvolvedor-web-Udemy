@@ -1,0 +1,17 @@
+(video 105)
+
+no bootstrap os icones são fontes, e não imagens. Podemos tratá-los com formatação de texto.
+
+icones podem ser:
+cabeçalho
+link
+botões
+
+ícones disponíves em:
+https://getbootstrap.com/docs/3.3/components/
+
+-------------------------
+é possível, por exemplo, definir tamanho e cor aos ícones (ele é texto)
+      <p style="color: orange;font-size: 100px;">
+        <span class="glyphicon glyphicon-music"></span>
+      </p>

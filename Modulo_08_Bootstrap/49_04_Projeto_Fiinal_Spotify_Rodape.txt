@@ -1,0 +1,15 @@
+(videos 128) - Arquivos da pasta: 
+./49_Projeto_final/05_projeto-inicial-spotify-rodape
+-------------
+Em estilo.css:
+
+/* -- rodape -- */
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative; /*Deixa a barra preta de rodapé por cima da imagem do celular. Se não fizesse isso a imagem de cima passaria por cima do rodape onde eles se encontram. */
+}
+
+.item-rede-social{
+	float: right;
+}

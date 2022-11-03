@@ -1,0 +1,81 @@
+(video 172, 173, 175)
+--------------------------
+Essa função abaixo é importante pois garante que todo o código e arquivos estão carregado, evitando erros:
+$( document ).ready( function() {
+	console.log ("O DOM está construido/carregado!");
+}); 
+
+----------------------------------------------------------------------------
+
+			EVENTOS DO MOUSE
+
+----------------------------------------------------------------------------
+
+.click()
+.dblclick()
+.mousedown()
+.mouseover()
+.mouseout()
+
+
+
+----------------------------------------------------------------------------
+
+			EVENTOS DO TECLADO
+(video 174)
+----------------------------------------------------------------------------
+
+.keydown()
+.keypress() //não captura ALT, CRTL, SHIFT, ESC, ...
+.keyup()
+
+
+
+----------------------------------------------------------------------------
+
+			EVENTOS DO FORMULÁRIO
+(video 175)
+----------------------------------------------------------------------------
+
+.focus() //quando o elemente recebe o foco do cursor
+.blur() //quando o elemente perde o foco do cursor
+.change() //quando o elemento é modificado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+#box {
+	width: 400px;
+	height: 400px;
+	background: #b9c941;
+	padding: 40px;
+	
+	/*
+	Observar que nossa caixa tem altura/largura de 400px + padding 50px  de cada lado = (480 x 480) px
+	Basta zerar o padding para ver a diferença que ele acarreta no tamanho da caixa (obs: antes tirar 
+	a linha de box-sizing abaixo para ver diferença.)
+
+	Ao se especificar um box-sizing ele força a caixa ter o tamanho da width x height independentemente do padding.
+	*/	
+	
+	/*box-sizing: border-box;  ... a simples é essa linha, mas para haver compatibilidade entre diferentes navegadores usa-se a linha abaixo*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box
+}

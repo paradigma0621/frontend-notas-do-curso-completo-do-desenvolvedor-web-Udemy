@@ -1,0 +1,31 @@
+(video 194)
+--------------------------------------------------------------------------------
+
+Variáveis
+----------
+tipos: int, float, string, boolean, array, ...
+
+devem obrigatoriamente iniciar com o caractere "$".
+não pode ser iniciado com números.
+não aceitam nomes com caracteres especiais (exceto o caractere "_").
+
+Não requer e não suporta a definição explícita de tipo. O interpretador atribui automaticamente o tipo.
+
+É case sensitive ($nome != $Nome)
+
+As variáveis podem mudar de tipo ao longo do script.( ???)
+
+----------------------------------------------------
+A respeito de concatenação de variaveis string :
+	<?php
+		$varString1 = "olá";
+		$varString2 = " desse modo";
+	
+		echo $varString;
+		echo '<br /> Contatenando aparece' . $varString2;
+
+		echo "<br /> usando aspas duplas podemos incluir as variaveis internamente na cadeia de caractres: como aparece $varString2";
+?>
+
+--------------------------------------------------------------------------------
+(video 195)

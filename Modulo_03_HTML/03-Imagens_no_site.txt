@@ -1,0 +1,18 @@
+(video 18) - imagens no site
+
+tag <img> - não tem tag de fechamento, como acontece com  <br>. Coloca-se portanto <img />
+
+usa-se atribus para a tag img: o source da imagem (src).
+
+<img src="pasta/imagem.jpg" />
+
+--------------
+podemos ainda definir largura/altura:
+
+<img src="pasta/imagem.jpg" width="200"/>
+<img src="pasta/imagem.jpg" height="100"/>
+<img src="pasta/imagem.jpg" width="250" height="150"/>
+
+pode ter src como algo na internet
+<img src="http://www.capasdistake.com.br/imagens/img.jpg" />
+

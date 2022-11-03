@@ -1,0 +1,39 @@
+(video 103)
+
+O que tem de novo nessa aula é que apareceu:
+se fizer
+          <a href="#" class="btn">Botão seco</a>
+--------------
+Aplicação de botão em link:
+   <a href="#" class="btn btn-default">Botão link</a>
+--------------
+Aplicação de botão em input:
+   <input type="submit" class="btn btn-default" value="Botão Submit">
+--------------
+Aplicação como button (mais recomendado de se usar oficialmente)
+   <button class="btn btn-default">Botão Button</button>
+
+
+Classes para mudar as cores desse tipo de botão:
+  <button class="btn btn-default">Botão Button</button>
+  <button class="btn btn-primary">Botão Button</button>
+  <button class="btn btn-sucess">Botão Button</button>
+  <button class="btn btn-danger">Botão Button</button>
+  <button class="btn btn-warning">Botão Button</button> 
+  <button class="btn btn-info">Botão Button</button>
+  <button class="btn btn-link">Botão Button</button>
+--------------
+
+  <button class="btn btn-default btn-bloco">Botão Button</button>
+
+o botão passa a funcionar como um bloco (lembrar do block/inline)
+Ele ocupa toda a width.
+
+
+---------------
+da mesma forma como especificamos tamanho de containers dependendo do tipo de leitor que lê a página, também podemos definir tamanho para os botões:
+	  <button class="btn btn-default">Botão padrão</button>
+          <button class="btn btn-default btn-xs">Botão</button>
+          <button class="btn btn-default btn-sm">Botão</button>
+          <button class="btn btn-default btn-md">Botão</button>
+          <button class="btn btn-default btn-lg">Botão</button>

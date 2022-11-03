@@ -1,0 +1,7 @@
+(video 105)
+
+<nav>: nova tag do HTML5 para criação de barra de  navegação
+
+no html dessa aula é interessante dar um resize  na tela deixando-a pequena, o menu texto some e aparece um botão de menu.
+
+

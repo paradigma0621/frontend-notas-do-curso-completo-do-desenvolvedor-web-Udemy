@@ -1,0 +1,70 @@
+(video 20) - Tabelas
+
+tag <table> -  tem abertura e fechamento (</table>)
+---------------------------------
+usa o atributo: border (em número de pixels)
+
+<table border="1"> 
+tabela
+</table>
+----------------------------------
+<tr> (table row): define linha da tabela
+
+<table border="1"> 
+	<tr>
+		aa
+	</tr>
+</table>
+
+----------------------------
+até o que foi feito até acima não fecha table, é preciso ainda:
+<td> (table data): cria célula da tabela.
+
+Por fim teremos:
+<table border="1"> 
+	<tr>
+		<td>aa</td>
+	</tr>
+</table>
+
+----------
+
+ou com 2 célular na mesma linha:
+<table border="1"> 
+	<tr>
+		<td>aa</td>
+		<td>bb</td>
+	</tr>
+</table>
+
+------------
+criando mais uma linha ficaria:
+<table border="1"> 
+	<tr>
+		<td>aa</td>
+		<td>bb</td>
+	</tr>
+
+	<tr>
+		<td>cc</td>
+		<td>dd</td>
+	</tr>
+</table>
+--------------------------------
+podemos trocar <td> por <th>: diferenci-se o título (table head) - faz um  cabeçalho na tabela: fica negrito e centralizado
+<table border="1"> 
+	<tr>
+		<th>Código</th>
+		<th>Produto</th>
+	</tr>
+
+	<tr>
+		<td>codigo1</td>
+		<td>produto1</td>
+	</tr>
+
+	<tr>
+		<td>codigo2</td>
+		<td>produto2</td>
+	</tr>
+</table>

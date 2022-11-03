@@ -1,0 +1,30 @@
+(video 051)
+
+Propriedades de estilo:
+
+float: cria boxes que se reajustam na tela. Pode-se especificar left, right, none ou inherit.
+
+clear: limpa/desfaz a instrução floar. Pode ser: none, left, right, both ou inherit.
+------
+Criei um exemplo: 20_Elementos_flutuantes.html que parece ser mais ilustrativo do que ficar discorrendo e sendo prolixo.
+------
+Tem exemplos interessantes na página:
+https://www.w3schools.com/css/css_float.asp
+
+Formato:
+		<style type="text/css">
+
+			#resumo-noticia{
+				border:1px solid gray;
+				width: 450px;
+				height: 400px;
+				float: left;
+				margin: 10px;
+			}
+
+			.clear{
+				clear: both; /*desabilita o modo float*/
+			}
+
+		</style>
+

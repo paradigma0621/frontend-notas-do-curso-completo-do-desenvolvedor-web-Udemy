@@ -1,0 +1,60 @@
+(videos 118, 119, 120) - Arquivos da pasta: 
+./49_Projeto_final/02_projeto-inicial-spotify-barra-navegacao/projeto-inicial-spotify
+
+o Spotify foi criado usando bootstrap. 
+------------------------------
+podemos inserir o ícone da página que aparece no navegador assim:
+dentro da <head> colocar:
+    <link rel="icon" href="imagens/favicon.png">
+
+para gerar o ícone pode-se utilizar:
+http://www.favicon.pro/pt/
+----------------------------------
+
+   <div class="collapse navbar-collapse" id="barra-navegacao">
+esse código é para ter botão para que quando o usuário visualizar a barra num dispositivo menor (ex:celular), e que essa barra só aparece se o usuário apertar um botão
+---------------------------------
+   <ul class="nav navbar-nav navbar-right">
+o navbar-right é para que os itens da barra de navegação fiquem à direita.
+-----------------------------------
+            <span class="sr-only">alternar navegação</span>
+recurso para ser carregado apenas em leitores de tela (questão de acessibilidade).
+----------------------------------
+no arquivo estilo.css, em .img-logo:
+imagem da barra de navegação="spotify.svg" (svg= formato de imagem que permite criar imagens escaláveis)
+svg=imagens que se adequam aos diversos dispositivos
+
+	background-size: contain;
+define que a imagem de fundo tem o tamanho da imagem que se está usando.
+
+	background: url('imagens/spotify.svg') ***no-repeat;****
+ap/pró: se a imagem não é do tamanho certo, começa a repetir a apresentação da imagem dentro do container, por isso se coloca esse "no-repeat": para que a imagem apareça só uma vez.
+
+	color: transparent;
+caso não carregue a imagem, atras delá tem um texto escrito "Spotify" que então aparecerá. Também é com para caso se esteja usando um leitor de tela (recurso de acessibilidade).
+
+----
+no html:
+    <nav class="navbar navbar-fixed-top *****navbar-inverse*****
+esse navbar-inverse inverte as cores da navbar, ou seja: antes era texto em preto e fundo branco, agora é texto branco e fundo preto. necessário para se visualizar o .img-logo da navebar (spotify.svg)
+--------
+
+    <nav class="navbar navbar-fixed-top navbar-inverse *****navbar-transparente*****">
+a class navbar-transparente não existia, o programador a criou para conseguir sobrescrever as propriedades do navagador.
+
+	no estilo.css nos referimos a essa classe como:
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0, 0, 0, 0.6);
+	border: none; /*para tirar a bordem inferior que por padrão aparecia no navegador/menu*/
+}
+------------------------
+No site do Spotify nós vemos que a cor do link quando o mouse vai por cima dos links na barra de navegação não é igual a nossa. Podemos carregar nosso site, ir em cima do link e clicando com o botão direito sobre ele, escolher "Inspecionar elemento" - com isso nós vemos como nosso Bootstrap está configurando o estilo desse elemento. No nosso estilo.css temos:
+
+.navbar-inverse .navbar-nav>li>a {  /*link q está dentro da li, que está dentro da classe navbar-nav, que está dentro da classe navbar-inverse*/ /*O ">"  seleciona o filho direto do elemento... equivale a ser específico em relação a queremos alterar */
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover { /*quando o mouse passa por cima desses elementos específicos*/ 
+	color: #9bf0e1;
+}

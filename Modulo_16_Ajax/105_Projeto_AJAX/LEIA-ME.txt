@@ -1,0 +1,17 @@
+
+Se o carregamento der um alert de erro "deu erro - status 0", é porque é preciso colocar os arquivos do site dentro do servidor do 127.0.0.1
+
+
+
+
+            //Verificamos se o "readyState" é "4" (requisição finalizada)
+            if (httpRequest.readyState == 4) {
+                //Verificamo o "status"
+                if (httpRequest.status == 200) {
+                    //Se o status for 200, tudo OK !
+                    document.getElementById('div_conteudo').innerHTML = httpRequest.responseText;
+                } else {
+                    //Se não for 200, problemas !
+                    alert('deu erro - status: '+httpRequest.status); //Erro !
+                }
+            }

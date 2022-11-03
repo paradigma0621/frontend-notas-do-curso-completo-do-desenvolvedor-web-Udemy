@@ -1,0 +1,7 @@
+(video 196)
+--------------------------------------------------------------------------------
+ 
+Variáveis Arrays Multidimensionais (ou matrizes)
+-----------------------------------------------
+é possível definir arrays de mais de 2 dimensões.
+ver php exemplo

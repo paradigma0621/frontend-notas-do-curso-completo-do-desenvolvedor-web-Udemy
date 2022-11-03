@@ -1,0 +1,34 @@
+(video 247)
+------------------------------------------------------------------------------------------
+(Executar os comandos dados no arquivo: 99_tb_pessoas.txt)
+
+ATUALIZANDO REGISTROS:
+----------------------
+
+update <tabela> set <campo> = <valor> where <condicao>
+
+------------------------------------------------------------------------------------------
+
+select * from `tb_pessoas` where id = 3
+(se retornar apenas 1 registro, podemos usar a coluna id para modifica-lo)
+
+update tb_pessoas set nome='Maria Silva' WHERE id = 3
+
+------------------------------------------------------------------------------------------
+
+Alterar mais de um valor ao mesmo tempo para a pessoa de id=14:
+
+update tb_pessoas set nome='José da Silva', idade=14, email='jose.silva@contato.com.br' where id = 14
+------------------------------------------------------------------------------------------
+
+Queira atualizar todas as pessoas com idade superior a 80 passam a ter por interesse 'Saúde':
+
+select * from `tb_pessoas` where idade >= 80
+update tb_pessoas set interesse = 'Saúde' where idade >= 80
+
+------------------------------------------------------------------------------------------
+
+pegar todas as pessoas que tem idade entre 10 e 20 anos, e vamos colocar interesse para eles como sendo Esporte
+
+select * from `tb_pessoas` where idade > 10 and idade <=20  (AQUI É SÓ PARA VER QUAIS TEM)
+update `tb_pessoas` set interesse = 'Esporte' where idade > 10 and idade <=20

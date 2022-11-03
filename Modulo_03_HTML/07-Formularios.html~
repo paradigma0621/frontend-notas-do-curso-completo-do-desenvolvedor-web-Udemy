@@ -1,0 +1,42 @@
+<!doctype html>
+
+<head><title>Pagina de cadastro</title></head>
+<body>
+
+</body>
+<form>	<h1> Cadastro </h1>
+	Login: <br />
+	<input type="text" name="login"/> <br />
+	Password: <br />
+	<input type="password" name="senha"/> <br />
+
+	<input type="button" value="TextLabelLogin"/> 
+	<input type="submit" value="TextLabelSubmit"/>  
+
+	<br />
+	<input type="radio" name="sexo"/> Masculino<br />
+	<input type="radio" name="sexo"/> Feminino<br />
+	
+	<h2>Interesses</h2>	 
+	<input type="checkbox"> Futebol<br />
+	<input type="checkbox"> Cursos<br />		 
+	<input type="checkbox"> Eletrônicos <br />
+
+	<h3> Estado <h3/>
+	<select>
+		<option>SP</option>
+		<option>PR</option>
+		<option>SC</option>
+		<option>RS</option>
+		<option>RJ</option>
+	</select>
+
+	<br />
+	Observações: <br />
+	<textarea> </textarea>
+	<br />
+ 
+	<input type="button" value="TextLabelCadastrar"/> 
+
+</form>
+</body>

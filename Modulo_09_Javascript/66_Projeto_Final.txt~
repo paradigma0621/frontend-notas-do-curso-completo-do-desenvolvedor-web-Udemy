@@ -1,0 +1,93 @@
+(videos 161, 162, 163, 165)
+-----------------------------------------------
+			PARTE I
+-----------------------------------------------
+ver em: /66_Projeto_Final_Jogo_Estourando_Baloes/estourando_baloes_parte_1_finalizado/index.html
+
+window.location.href = 'jogo.html';
+Força o carregamento de uma html. Não é o método mais recomendado para passar página pra ser carregada (o melhor seria através de uma form), porém como estamos aprendendo javascript, é uma possibilidade
+-
+ainda ness propriedade dita acima, é possível tb  passar valores de informação:
+
+window.location.href = 'jogo.html?'+nivel_jogo;
+onde nivel_jogo vem da lista de seleção que escolhe fácil/médio/difícil, valendo 1,2 ou 3.
+-----------------------------------
+ver em: /66_Projeto_Final_Jogo_Estourando_Baloes/estourando_baloes_parte_1_finalizado/jogo.html
+
+<div style="float: left; width: 600px; height: 500px; background: url('imagens/cenario.png'); background-position: bottom;">
+
+como a figura tem altura de 550px, e como colocamos a altura de 500px, ela fica aparecendo faltando 50px da parte de baixo. Atribuindo background-position: bottom; pede pra ela aparecer a parte debaixo, em detrimento da parte de cima (que é mais o céu da figura), então fica faltando aparecer 50px da parte de cima.
+---------------------------------------
+
+
+		PARTE II
+---------------------------------------
+ver em:  /66_Projeto_Final_Jogo_Estourando_Baloes/estourando_baloes_parte_2_finalizado/jogo.js
+
+Como iniciar o jogo quando carregar a página? 
+R: Colocar em jogo.html: <BODY onload="funcaoDeDentroDoScript_IniciaJogo()" ...>
+
+---------
+
+	var url = window.location; //traz a URL inteira 
+	var url = window.location.search; //pega só o que está a partir do sinal de interrogação
+	
+	var nivel_jogo = url.replace("?", ""); //substitui o "?" por nada. Tira o primeiro caractere (que é "?") da string da UEL que filtramos e armazenada em 'url'
+
+-----------
+	Para colocar o tempo de segundos relativo a dificuldade selecionada dentro do reloginho, coloca um tag span: 
+<span id="cronometro" style="color: red; font-size: 30px;"></span>
+em jogo.html dentro da célula da tabela onde vai aparecer o relógio.
+	
+	No jogo.js adicionamos a linha que passa o número/tempo a ser escrito lá:
+	//inserindo segundos no span
+	document.getElementById('cronometro').innerHTML = tempo_segundos;
+-----------
+
+		var balao = document.createElement("img");
+		balao.src = 'imagens/balao_azul_pequeno.png';
+		balao.style.margin = '10px';
+		document.getElementById('cenario').appendChild(balao);
+	}
+}
+--
+Isso pq dentro de jogo.html temos a id="cenario" que vai receber os elementos "balao" criados
+
+		<div id="cenario" style="float: left; width: 600px; height: 500px; background: url('imagens/cenario.png'); background-position: bottom;"></div>
+
+
+---------------------------------------
+
+
+		PARTE III
+---------------------------------------
+ver em:  /66_Projeto_Final_Jogo_Estourando_Baloes/estourando_baloes_parte_3_finalizado/jogo.js
+
+foi adicionada a funcionalidade de cronômetro. Como fazer isso? Usando uma função do jQuery: 
+	setTimeout()
+	2 parametros: uma função, e o tempo que chamará a função a cada esse tempo definido (em milisegundos - 1000 = 1segundo)
+
+no nosso jogo.js ocorre:
+setTimeout("contagem_tempo("+segundos+")", 1000);
+que nada mais é que chamar a função "contagem_tempo()" com argumento da variável segundo, para ser executada a cada 1000ms.
+
+	A linha:
+		segundos = segundos - 1;
+	inicia o cronometro, caso contrário ele não anda
+
+
+	A linha: clearTimeout(timterId)
+	dá o comando de parar de executar a função contagem_tempo() que estava programada pra rodar a cada x tempo
+
+
+	a linha: contagem_tempo(tempo_segundos + 1)
+	é para não começar o jogo "de cara" decrementando o tempo
+
+-----------------------------------------
+É possível usar o recurso de se referir à:
+	document.getElementById('baloes_inteiros').innerHTML
+tanto para ler, como para atribuir valores. Ex:
+
+	baloes_inteiros = document.getElementById('baloes_inteiros').innerHTML;
+
+	document.getElementById('baloes_inteiros').innerHTML=10;

@@ -1,0 +1,37 @@
+(video 19) - links
+
+tag <a> - vem de anchor (âncora), tem abertura e fechamento (</a>)
+usa o atributo: href (hiperlink reference)
+
+para página externa:
+<a href="http://www.capasdistake.com.br/contato.html"> 
+clique aqui 
+</a>
+
+----
+para página interna:
+<a href="produtos.html"> 
+clique aqui2 
+</a>
+
+-----------
+referenciando a uma página na qual já se está (interessante quando se tem um menu: Home Produtos Contato)
+<a href=""> 
+clique aqui_pore_eu_ja_estou_aqui 
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

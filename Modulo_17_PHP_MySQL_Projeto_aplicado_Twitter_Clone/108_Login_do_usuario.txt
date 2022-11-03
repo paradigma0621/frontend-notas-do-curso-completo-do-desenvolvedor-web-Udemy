@@ -1,0 +1,8 @@
+(video 266)
+-----------------------------------------------------------------------
+
+Quem envia requisição de login em index.php é a linha:
+		<form method="post" action="validar_acesso.php" id="formLogin">
+
+
+assistir video 266 denovo, pois o mesmo apresenta muita informação (eu não tomei nota delas)

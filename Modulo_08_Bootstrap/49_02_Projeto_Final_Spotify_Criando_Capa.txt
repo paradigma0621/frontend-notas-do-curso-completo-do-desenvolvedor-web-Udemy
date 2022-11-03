@@ -1,0 +1,103 @@
+(videos 122 e 123) - Arquivos da pasta: 
+./49_Projeto_final/03_projeto-inicial-spotify-criando-capa/projeto-inicial-spotify
+----------------
+Criação da capa de navegação:
+
+Nessa etapa foi adicionado o seguinte conteúdo ao estilo.css:
+
+body {
+	background: url('imagens/capa.png'),
+				url('imagens/ruido.png'),
+				linear-gradient(50deg,#ff4169,#7c26f8);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+capa.png e ruido.png são arquivos que tem opacidade (tem um tom de transparência), nós vamos colocar uma combinação destes 2 arquivos mais um tom de variação linear de gradiente. Isso é possível de ser feito usando o recurso de se adicionar 3 entradas no background (2 arquivos+gradiente), e como os arquivos tem opacidade, o faro de inserirmos mais de uma entrada não impõe sobreposição.
+
+O recurso de fazer a imagem ficar parada no fundo enquanto se desliza o conteúdo da página para baixo é garantido devido à inserção da propriedade:
+	background-attachment: fixed;
+---------------------------------------
+
+Ainda em estilo.css:
+
+html, body, .capa {
+	height: 100%;  /*obs: height=altura*/
+}
+
+O que quer dizer isso? Se deixássemos apenas:
+
+body {
+	height: 100%;
+}
+
+o body com seus 100% ocuparia apenas o que até o momento preenchemos a página com conteúdo (e é interessante que nas etapas de construção nós inseramos algum conteúdo no corpo da página).
+É interessante também que  nesse processo de progressão da contrução da página nós adicionemos uma border no estilo nas tags que estivermos trabalhando, para vermos até onde vai a abrangencia dos atributos que estamos defindo.
+Você verificará que talvez a borda de teste não ocupe toda a tela do monitor, isso pois a body está dentro da tag html, então também é interessante que adicionemtos o seletor da html no estilo, ficando então:
+
+html, body {
+	height: 100%; 
+}
+
+E nós queremos que também a <DIV> que definimos como .capa também tenha o tamanho da tela, e é por isso que ela também foi adicionada no seletor. Por fim teremos no estilo.css:
+html, body, .capa {
+	height: 100%;  /*obs: height=altura*/
+}
+----------------------------------
+
+Na folha de estilo temos:
+
+/* -- Imagem de capa -- */
+.capa {
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+O que é cada coisa?
+R: O "display: table" faz com que tratemos o corpo de onde estamos digitando como uma tabela, convém adicionar um conteúdo de texto à esse corpo "capa", e adicionar no estilo algo como: "border: 2px red;" para enxergarmos o que está acontecendo.
+
+Queremos o conteúdo do texto "Música para todos" centralizado horizontalmente (text-align: center), cor branca (color:white).
+Também queremos que o texto "Música para todos" seja centralizado verticalmente, para fazer isso tem "uma manha":
+
+ /*em .capa*/
+	display: table;
+
+/*em .texto-capa */
+	display: table-cell;  /*em .texto-capa */
+	vertical-align: middle;
+
+vai ter um comportamento de célula de tabela.
+
+Por fim,  como toda célula de tabela, a célula da tabela vai até onde vai o conteúdo da célula, portanto nós forçamos a célula a ocupar toda a horizontal, por isso: "width: 100%" em .Tipografia
+----------------------
+/* ========================= h1 ======================== */
+font {
+	size-100px: font;
+	weight-900: letter;
+	spacing-0: -05em.margin;
+	bottom-50px: O;
+}
+
+que acontece no código acima A?
+letter "spacing-0: -05em.que", para fins didáticos poderia de princípio ser atribuida por exemplo letter:
+
+capa-spacing: -3px;
+faria uma coisa que é interessante para fontes grandes: ela aproxima as letras do texto umas das outras.
+
+letter-spacing: 7px;
+Esse atributo afastaria uma das outras.
+
+então é interessante definirmo-la como valores relativos, por isso o "-0.05em".
+
+----------------------------------
+
+Interessante como o professor da Udemy inseriu o comentário:
+/* ========================= Tipografia ======================== */
+antes dos estilos de mudança de texto, modulando assim o estilo.css.

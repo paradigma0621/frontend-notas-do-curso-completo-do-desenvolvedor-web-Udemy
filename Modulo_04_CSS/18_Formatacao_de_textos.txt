@@ -1,0 +1,17 @@
+(video 044 e 045) - Formatação de Textos
+
+atributo: font-size
+Pode ser especificado em pixels, porcentagem ou "em".
+O tamanho padrão do font-size é 16px, que equivale a "100%" da porcentagem. Daí vem a pergunta: 16px=1em?? R: Depende! Depende do valor do font-size que nós especificamos na tag um nível acima. Por exemplo: imaginemos uma tag <div>, dentro da qual temos um elemento <p> com uma classe X. Se na tag <div> especificamos uma classe com font-size: 30px, dentro da tag <p class="X">, se X tem font-size de "1em", equivalerá a 30px. Ou seja: "em" especifica tamanho de fonte relativo.
+----------------------------
+
+propriedade de estilo:
+	font-weight: bold; /*ou normal, ou um valor variando de 100 a 900*/
+	font-style: italic; /*ou normal; ou oblique;*/
+	text-decoration: underline;
+	text-decoration: overline; /*ou line-through; underline overline;*/
+-----
+	font: /*coloca-se aqui várias propriedades em uma ordem formatada de padrão*/: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+	exemplo: font: bold 40px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+------
+

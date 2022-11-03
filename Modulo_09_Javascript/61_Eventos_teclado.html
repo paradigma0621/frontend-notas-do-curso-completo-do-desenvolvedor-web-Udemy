@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+	/* EVENTOS DO TECLADO:
+	onkeydown (são captura as teclas do teclado (CTRL, ALT, SHIFT tb são capturadas)
+
+	onkeypress (não captura todas as teclas do teclado (CTRL, ALT, SHIFT não são capturadas)
+
+	onkeyup
+
+	*/
+
+	document.write('esta carregando a página <br />');
+	
+//--------
+	function msgDigitou() {
+		document.write('vc clicou apertou uma tecla<br />');
+	}
+//-------Se eu parasse o código aqui não seria executada a função. Ela só é processada caso elea seja chamada.
+	
+//--------
+
+
+	</script>
+  </head>
+  <body>
+	<p>abaixo executa uma função caso seja pressonada uma tecla dentro do campo de texto, qualquer tecla (inclusive SHIFT, ALT, CTRL)</p>
+	<input onkeydown="msgDigitou()" type="text"/>
+	<br />
+
+	<p>abaixo apresenta msg de alerta caso a tecla seja solta (inclusive SHIFT, ALT, CTRL)</p>
+	<input onkeyup="alert('soltou a tecla')" type="text"/>
+	<br />
+
+
+  </body>
+</html>
+
+	 

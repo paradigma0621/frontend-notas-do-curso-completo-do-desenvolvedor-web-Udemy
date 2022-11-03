@@ -1,0 +1,114 @@
+(video 225, 226)
+--------------------------------------------------------------------------------
+			FUNÇÕES PARA TRATAR ARRAYS
+--------------------------------------------------------------------------------
+
+mostrar conteudo de um array: var_export($lista);
+
+
+FUNÇÂO "is_array":
+---------------------
+	Verifica se uma variável é um array. Retorna true ou false.
+	(Pró/AP): Se o array for vazio retorna true (ex: $array = array()).
+	Ex:
+	is_array($variavel);
+	
+
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "in_array":
+---------------------
+	Verifica se um valor existe em um array. Retorna true ou false. Primeiro parâmetro é o que queremos procuras, e segundo parâmetro é o array.
+
+	Ex:
+	$array_verificar = array('mac', 'linux', 'windows');
+	in_array('mac', $array_verificar); //retorna true
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "array_keys":
+---------------------
+	Retorna todas as chaves de um array.
+
+	Ex:
+	$sistemas = array(10=>'mac', 11=>'linux');
+	$chaves_array = array_keys($sistemas);
+
+	var_export($chaves_array); //retorno: array ( 0 => 10, 1 => 11, )
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "sort":
+---------------
+	Ordena um array. 
+	Salva o resultado na mesma variável e retorna true ou false. (Obs: os índices não se mantem)
+
+	$frutas = array(0=>'banana', 1=>'amora', 2=>'laranja');
+	sort($frutas); //Retorna: array(0=> 'amora', 1=>'banana', 2=> 'laranja')
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "asort":
+---------------
+	Ordena um array. 
+	Salva o resultado na mesma variável e retorna true ou false. (Obs: os índices se mantem)
+
+	$frutas = array(0=>'banana', 1=>'amora', 2=>'laranja');
+	sort($frutas); //Retorna: array(1=> 'amora', 0=>'banana', 2=> 'laranja')
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "count":
+---------------
+	Conta elementos de um array.
+	
+	Ex:
+	$lista[0] = 'Notebook';
+	$lista[1] = 'Celular';
+	count($lista); //retorna 2
+	
+-------------------------------------------------------------------------------
+
+FUNÇÂO "array_merge":
+---------------------
+
+	Funde um ou mais arrays. Retorna array
+	
+	Ex: 
+	$array1 = array('linux', 'windows');
+	$array2 = array('mac');
+	$array3 = array_merge($array1, $array2);
+
+	var_export($array3); //array({ [0]= "linux" [1]= "windows" [2]= "mac" })
+
+	//Podemos usar mais de 2 arrays: $array4 = array_merge($array1, $array2, $mais_um_array, ...);
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "explode":
+---------------------
+
+	Divide uma string baseado em um delimitador. Retorna array.
+	
+	Ex: 
+	$data='10/12/2019';
+	$retorno = explode('/',$data);
+
+	var_export($retorno); 
+	//retorna: array ( 0 => '10', 1 => '12', 2 => '2019', )
+
+-------------------------------------------------------------------------------
+
+FUNÇÂO "implode":
+---------------------
+
+	Junta elementos de um array em uma string.
+	
+	Ex: 
+	$array=array(0=>'10', 1=>'12', 2=>'2019');
+	$retorno = implode('/',$array);
+
+	echo $retorno;  // retorno: 10/12/2019
+
+-------------------------------------------------------------------------------

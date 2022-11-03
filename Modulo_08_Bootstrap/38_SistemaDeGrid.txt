@@ -1,0 +1,67 @@
+Exemplos de Grids com Bootstrap: https://getbootstrap.com/examples/grid/
+
+Mais opções de Grids: http://getbootstrap.com/css/
+--------------------
+Em:
+ 
+   	<div class="container marcador2">
+
+temos que a class container é um modelo próprio do bootstrap que nós utilizamos. Definindo a frente "marcador2" teremos que além da 1a classe iremos utilizar também essa 2a classe.
+
+-------------------------
+.marcador{
+	background: #fe9d9d;
+	border:1px solid #f94646;
+}
+
+.marcador2{
+	background: #5bf946;
+	border:1px solid #36ae26;
+}
+---------------------
+
+É especificado quantos conteiners são utilizados em cada um dos modos
+de visualização do usuário. Exemplo:
+
+   <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4 ">
+   	<h1>conteudo 1</h1>
+   </div>
+
+nesse código, quando a página for carregada em tamanho:
+-muito pequeno: ocupa 1 container
+-pequeno: ocupa 2 container
+-médio: ocupa 3 container
+-grande: ocupa 4 container
+-----------
+os containers de baixo sobem pra cima se sobrar espaço em cima(?), e eles
+descem para baixo quando falta espaço em cima. Para evitar complicações
+desse tipo, convém planejar as linhas de modo que a linha inteira contenha
+12 containers. Exemplo do código "38_index.html":
+---------------
+<div class="row"> <!--com a classe row podemos criar linhas dentro do layout-->
+	<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 marcador4">
+   		<h1>abc</h1>
+   	</div>
+
+   	<div class="col-xs-9 col-sm-6 col-md-6 marcador2 col-lg-3 ">
+   		<h1>conteudo 3</h1>
+   	</div>
+
+	<div class="col-xs-1 col-sm-4 col-md-2 marcador3 col-lg-5 ">
+		<h1>def</h1>
+	</div>
+</div>
+
+
+-------------------------
+A única coisa que eu não consegui fazer no exemplo acima foi criar um contai-
+ner col-xs-1 bem pequinininho, como se fosse por exemplo colocar apenas o
+botão de menu e carregar esse botão de menu como um ícone no canto do
+celular.
+Eu resolvi isso trocando a versão dos arquivos da minha pasta "bootstrap"
+que eu tinha baixado do site que eu disse no começo desse arquivo pelos da
+que eu baixei do servidor do videos piratas das aulas. 
+Talvez resolvi trocando a pasta pois as versões que aparecem dentro dos
+  <script src="
+eu acredito ter referenciado errado - seja por incompatibilidade ou outro
+motivo qualquer.

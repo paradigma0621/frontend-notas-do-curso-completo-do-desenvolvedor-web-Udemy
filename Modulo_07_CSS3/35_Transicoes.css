@@ -1,0 +1,55 @@
+/*****Transições***********************************/
+#box-transicao{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+/*Coisa mais simples possível:*/
+#box-transicao:hover{/*estado hover:quando o usuário passa o mouse em cima*/
+	background: black;
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+#box-transicao2{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+
+#box-transicao2:hover{/*estado hover:quando o usuário passa o mouse em cima*/
+	width: 400px;
+	background: black;
+	transition: background 3s; /*qual propriedade que se quer que tenha transicao, e o tempo que levará essa transição*/
+}
+/*------------------------------*/
+/*------------------------------*/
+#box-transicao3{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+
+#box-transicao3:hover{/*estado hover:quando o usuário passa o mouse em cima*/
+	width: 400px;
+	background: black;
+	transition: background 3s, width 8s; /*mais de uma propriedade que se quer que tenha transicao, e o tempo que levará essa transição - pode fazer com quantas quiser*/
+}
+
+/*------------------------------*/
+/*------------------------------*/
+#box-transicao4{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+#box-transicao4:hover{/*estado hover:quando o usuário passa o mouse
+ em cima*/
+	width: 400px;
+	background: black;
+	transition: all 3s; /*todas propriedades vão levar x tempo para a  transição*/
+}

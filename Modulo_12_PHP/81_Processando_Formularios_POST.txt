@@ -1,0 +1,25 @@
+(video 200) - Método POST
+--------------------------------------------------------------------------------
+
+	Também é um método usado para passar informações de uma página até outra.
+	Se o GET fazia isso, qual a diferença? R?: No metodo GET as variáveis ficam visiveis na URL, no POST não ficam visíveis. É um nível a mais de segurança. 
+
+
+<form role="form" action="81_Catalogo_Produtos_POST.php" method="post">
+
+Vai passar para essa mesma pagina a informação.
+
+----------------------------------
+O valor de "value" abaixo que vai ser passado pelo POST
+<select class="form-control" name="id_produto" id="id_produto">
+    	<option value="1">Cadeira</option>
+	<option value="2">Fogão</option>
+	<option value="3">Roteador wi-fi</option>
+	<option value="4">TV 29"</option>
+</select>
+----
+de modo que ele vai ser recebido e resgatado com:
+	$oQueEscolheu = $_POST['id_produto'];
+
+e mostrado na tela com:
+	echo $detalhe[$oQueEscolheu];

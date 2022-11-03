@@ -1,0 +1,132 @@
+(video 176, 178, 180, 182, 184)
+--------------------------
+------------------------------------------------------------------------------------------------------------
+
+				PARTE I
+
+------------------------------------------------------------------------------------------------------------
+jogador 1 marca "-1" na matriz de arrays
+jogador 2 marca "1" na matriz de arrays
+
+se houver soma:
+-3: jogador 1 ganha
+3: jogador 2 ganha
+sendo horizontal, vertical ou diagonal
+
+------------------------------------------------------------------------------------------------------------
+
+(video 178)
+contido em:
+./74_ProjetoFinal/jogo_da_velha_parte_1_finalizado
+
+Abaixo é apresentado um passo intermediário da construção do palco, onde para deixar 3 DIVs que a princípio ficariam uma sobre a outra, usou-se o recurso de style="display:inline-block;" para deixá-las lado-a-lado as 3 na mesma linha:
+
+		<div id="palco_jogo" style="margin-top:50px; text-align:center">
+			<div style="display:inline-block;">
+				<img src="imagens/jogador_1.png" />
+			</div>
+
+			<div style="display:inline-block;">
+						//aqui vai entrar o tabuleiro
+			</div>
+
+			<div style="display:inline-block;">
+				<img src="imagens/jogador_2.png" />
+			</div>
+		</div>
+--------------------------------
+Para fazer os riscos do tabuleiro do jogo da velha usa-se o seguinte recurso:
+<td style="border-bottom: solid 1px red; border-right:solid 1px red;">
+fazendo isso para cada uma das células da tabela que formam o tabuleiro.
+
+	
+------------------------------------------------------------------------------------------------------------
+
+				PARTE II
+
+------------------------------------------------------------------------------------------------------------
+(video 180)
+contido em:
+./74_ProjetoFinal/jogo_da_velha_parte_2_finalizado
+--------
+um exemplo de código de como acessar o conteúdo de um input:
+
+(alert('#entrada_apelido_jogador_1').val());
+	//mostra o conteúdo do input com id entrada_apelido_jogador_1. Val() é uma característica interna de um elemento "input"
+
+caso o valor estivesse dentro de um outro elemento, usaríamos:
+$('#nome_jogador_1').html($('#entrada_apelido_jogador_1').val());
+//onde #nome_jogador_1 é o id de um span na html
+//o conteúdo de um span está dentro do elemento span
+
+-------------------------------------------------------------
+
+no começo, quando vai inserir os nomes, convém estar escondido o palco com o tabuleiro, por isso fizemos:
+<div id="palco_jogo" style="display:none; margin-top:50px; text-align:center">
+
+o que faz isso é o "display:none"
+depois no jquery fazemos mostrar a div (vimos isso em mostrar e esconder Elementos - hide() e show()
+
+por isso em jogo.js:
+		//contrala visualização das divs
+		$('#pagina_inicial').hide();
+		$('#palco_jogo').show();
+
+-----------------------------------------------------------
+foi atribuido um id para cada célula do tabuleiro. Todas células são da classe ".jogada". Para saber qual célula recebeu clique usa-se:
+
+	$('.jogada').click( function(){
+
+		var id_campo_clicado = this.id;
+		alert(id_campo_clicado);
+	});
+--------------------------------------------------------
+Abaixo como atribuir estilos/formatações em elementos usando jQuery:
+
+$('#'+id).css('background-image', icone); //icone=endereço de uma imagem
+$('#'+id).css('color', 'red');
+(...)
+
+A função recebe 2 argumentos, um a propriedade que vai ser mudada, o outro do valor que ela receberá.
+
+------------------------------------------------------------------------------------------------------------
+
+				PARTE III
+
+------------------------------------------------------------------------------------------------------------
+(video 182) (continuar no começo deste)
+----------
+
+Para quebrar uma string em determinado caractere, dividindo-a em arrays:
+var linha_coluna = id.split('-');
+isso irá truncar nosso id de qual célula foi clicada. De fato, quando nós clicamos numa célula ela retorna uma string do tipo:
+	c-1
+	a-3
+	b-2 (...)
+divindo esse id no ponto '-', e separando a id em um array de strings'c' e '1', 'a' e '3', ...
+	linha_coluna[0] -> 'c'; //tem a linha
+	linha_coluna[1] -> '1'; //tem a coluna
+
+por isso: matriz_jogo[linha_coluna[0]][linha_coluna[1]] = ponto;
+
+console.log(matriz_jogo);
+Abrindo o inspecionador de elementos, ele apresenta  a cada passada de jogada um log de matriz muito interessante (de potencial parecido com a visualização dos valores das variáveis que o matlab apresenta, e isso durante a execução).
+
+-----------
+Os DIV elementos das células estão na classe ".jogada" - para parar de desenhar jogadas no tabuleiro depois que alguém ganhou a partida, usa-se o comando: 
+$('.jogada').off();
+para "desligar os eventos" (?AP: não sei se os eventos ou algo das propriedades) o relevante é que  dos elementos da classe .jogada não carregam mais imagens novas (nem são ocultos após acabar o jogo).
+
+------------------------------------------------------------------------------------------------------------
+
+				PARTE III-Extra
+(video 184)
+------------------------------------------------------------------------------------------------------------
+	$('.jogada').click( function(){
+		var id_campo_clicado = this.id;
+		$('#'+id_campo_clicado).off(); // <-- ESSA LINHA
+		jogada(id_campo_clicado);
+	});
+
+		//Essa linha apontada ganhou um video exclusivo para ela (video 184). Antes dela, alguém fazia uma marcação no tabuleiro, se o outro clicasse nesse mesmo lugar onde já havia uma marcação, a primeira era sobrescrita pela segunda. Adicionando essa linha: após alguém marcar uma célula com sua marca, a célula em questão passa a estar off, não sendo portanto sobrescrita pelo outro jogador, nem sendo possível fazer 2 jogadas do mesmo jogador na mesma célula. Quando eu vi apresentado o bug, eu já imaginei um if na matriz_jogada, sendo que com isso apenas seria válida a jogada caso (celula==0), mas o comando acima, trazido pela Udemy, é mais interessante.
+

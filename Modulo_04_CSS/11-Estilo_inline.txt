@@ -1,0 +1,26 @@
+(video 030)
+O estilo inline pode ser aplicado ao parágrafo (<p>), ao <h1>, <h2>, etc. Consiste em escreve o "style" dentro da própria tag.
+
+CSS = Cascading Style Sheets
+
+vale ressaltar no exemplo abaixo que se ambos os textos usassem iguais atribuitos é conveniente usar o recurso de seletores, que está feito no próximo resumo: "12-Seletores-CSS Interno".
+------------------------------
+<!doctype html>
+<html>
+	<head>
+		<title>JM Viagens - Página principal</title>
+		<meta charset="utf-8" />
+	</head>
+	
+	<body>
+	<p style = "color: red; border: 1px solid red;"> 
+	conteudo formatado com estilo 1... esse é o primeiro parágrafo, blablblablablablabllbabl alsdkf sdlf asdlkjf lkajsd flkj asdlkjfkljasdlkfk asldkjf kla sjdklfj asdkflkd lk
+	</p>
+	
+	<h1 style = "color: blue; border: 5px solid green; font-size: 90px">
+	conteudo formatado copm estilo 2
+	</h1>
+
+	</body>
+</html>
+

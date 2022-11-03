@@ -1,0 +1,33 @@
+(video 072)
+
+Novas inputs:
+
+<label> antes da <input>:
+---
+<label for="IDnome">Nome</label>
+<input type="text" id="IDnome">
+-------- Ao clicar sobre o texto "Nome" ele vai pra input ser preenchida.
+
+a estrutura é praticamente a mesma, só que no HTML5 tem mais types:
+exemplos:
+<input type="email" id="email">
+<input type="number" id="numero" min="5" max="10" step="2">
+<input type="url" id="url" placeholder="ex: http://wwww.">
+<input type="search" id="pesquisa" placeholder="ex: digite algo...">
+<input type="range" id="range" min="1" max="10" value="5">
+<input type="date" id="data">
+<input type="color" id="cor">
+----------------------
+obs: o placeholder pode ser usado em todos os campos
+placeholder="exemplo"
+
+a característica "requirer" define campos de preenchimento obrigatórios.
+<input type="email" id="email" placeholder="teste@teste.com.br" required>
+
+a característica "autofocus" define o campo que levará de prontidão o cursor assim que a página for carregada.
+<input type="email" id="email" placeholder="teste@teste.com.br" autofocus>
+
+---------
+o type="search" permite clicar no "x" pra apagar o texto escrito.
+-----------
+para recuperer o valor escolhido em type="range" pode-se usar javascript ou algum código de servidor.

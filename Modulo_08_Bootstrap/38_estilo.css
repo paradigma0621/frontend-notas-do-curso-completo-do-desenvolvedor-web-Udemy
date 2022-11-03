@@ -1,0 +1,23 @@
+.marcador{	/*com essa classe não podemos visualizar "a caixa" que é representada em cada etapa a área que estamos evidenciando, a fim de podermos acompanhar o comportamento dos elementos.*/
+	background: #fe9d9d;
+	border:1px solid #f94646;
+}
+
+.marcador2{
+	background: #5bf946;
+	border:1px solid #36ae26;
+}
+
+.marcador3{	/*com essa classe não podemos visualizar "a caixa" que é representada em cada etapa a área que estamos evidenciando, a fim de podermos acompanhar o comportamento dos elementos.*/
+	background: #ae9d1d;
+	border:1px solid #f94646;
+}
+
+
+.marcador4{
+
+	background: #bba9c6;
+
+	border:1px solid #36ae26;
+
+}

@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Titulo</title>
+
+	<script type="text/javascript">
+
+	/* EVENTOS DO MOUSE:
+	onclick
+
+	ondblclick
+
+	onmousedown - quando acionado com o click do mouse, mantendo o botao do mouse pressionado, ou não
+
+	onmouseover
+
+	onmouseout
+	*/
+
+	document.write('esta carregando a página <br />');
+	
+//--------
+	function msgBoasVindas() {
+		document.write('vc clicou com o mouse 2x sobre a area azul <br />');
+	}
+//-------Se eu parasse o código aqui não seria executada a função. Ela só é processada caso elea seja chamada.
+	
+//--------
+
+
+	</script>
+  </head>
+  <body>
+<!--Aqui foi programado o evento onclick sobra a área cinza -->
+	<div onclick="alert('clicou na area cinza')" style="background: #ccc; height: 400px; width: 150px";></div>
+
+<!--Aqui o onclick executa uma função -->
+	<div ondblclick="msgBoasVindas()" style="background: #b1c2d3; height: 300px; width: 150px";></div> 
+
+<!--Aqui foi atribuido mais de um evento ao mesmo objeto-->
+	<div onclick="alert('mais de um evento para esse elemento - vc clicou')" onmouseout="alert('mais de um evento para esse elemento - vc saiu da regiao da area rachurada')" style="background: #d100f3; height: 300px; width: 150px";></div> 
+
+  </body>
+</html>
+
+	 

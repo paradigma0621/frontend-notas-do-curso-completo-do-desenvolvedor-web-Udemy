@@ -1,0 +1,32 @@
+WWW: Word Wide Web
+URL: Uniform Resource Locator: "localizador padrão de recursos" = endereço do site
+HTTP: Hypertext Transfer Protocol = protocolo de transferência de hipertexto. Contém informações(ap:?) como: solicitante, solicitação (qual página está sendo solicitada) e servidor
+HTML: Hypertext Markup Language = linguagem de marcação de texto
+PHP:
+
+páginas estáticas: páginas escritas em HTML com conteúdo fixo
+
+páginas dinâmicas: págins HTML criadas em tempo de requisição
+
+
+--------------------------------------------------------------------
+		O LADO DO SERVIDOR:
+--------------------------------------------------------------------
+servidores:
+	Apache
+	IIS (da Microsoft)
+	IBM WebSphere
+	TOMCAT
+
+principais linguagens de programação web (server-side)
+	PHP
+	Python
+	ASP.net (da Microsoft)
+	Perl
+	Java
+
+Principais sistemas de gerenciamento de dados
+	PostgreSQL
+	ORACLE
+	MySQL
+	SQLServer (da Microsft)

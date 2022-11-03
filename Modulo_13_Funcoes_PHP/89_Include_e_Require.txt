@@ -1,0 +1,130 @@
+(video 219)
+--------------------------------------------------------------------------------
+
+INCLUDE:
+--------
+	Tenta incluir um arquivo PHP, caso não consiga emite um "warning" (continua a execução do código e a carregar a página).
+
+<?php
+include("arquivo.php"); 
+//ou
+include "arquivo.php";
+?>
+
+
+
+EXEMPLO:
+Se tívessemos por exemplo:
+<?php
+include "menu.php";
+?>
+
+conteudo da index1
+
+<?php
+include "menu.php";
+?>
+
+conteudo da index2
+
+<!-- ele vai incluir 2 vezes o conteudo do menu: 1 no começo e outra depois do "conteúdo do index1". -->
+--------------------------------------------------------------------------------
+
+
+
+REQUIRE:
+--------
+	Tenta incluir um arquivo PHP, caso não consiga emite um "fatal error" (pára a execução do código e de carregar a página).
+
+<?php
+require("arquivo.php"); 
+//ou
+require "arquivo.php";
+?>
+
+--------------------------------------------------------------------------------
+
+
+INCLUDE_ONCE:
+------------
+	Tenta incluir um arquivo PHP, irá incluir o arquivo apenas uma vez (inserir um código HTML+PHP em determinado ponto). Caso venha outro include_once do mesmo arquivo, não o irá incluir.
+	Caso não consiga emite um "warning" (continua a execução do código e a carregar a página).
+
+Sintaxe:
+
+<?php
+include_once("arquivo.php"); 
+//ou
+include_once "arquivo.php";
+?>
+
+
+
+EXEMPLO:
+Se tívessemos por exemplo:
+<?php
+include_once "menu.php";
+?>
+
+conteudo da index1
+
+<?php
+include_once "menu.php";
+?>
+
+conteudo da index2
+
+<!-- ele vai incluir apenas 1 vezes o conteudo do menu no começo -->
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+REQUIRE_ONCE:
+--------
+	Tenta incluir um arquivo PHP, irá incluir o arquivo apenas uma vez (inserir um código HTML+PHP em determinado ponto). Caso venha outro include_once do mesmo arquivo, não o irá incluir.
+	Caso não consiga emite um "fatal error" (pára a execução do código e de carregar a página).
+
+
+<?php
+require_once("arquivo.php"); 
+//ou
+require_once "arquivo.php";
+?>
+
+------------------------------------------------------------------------------------
+Podemos criar um site com um menu com várias guias: HOME, ESPORTES, TECNOLOGIA, CULINÁRIA, CONTATO, ETC., e cria um menu.php com todas os links para essas páginas. Carregando o menu com include no começo de cada php de cada um dos arquivos (home, esportes, tecnologia, ...) tem-se o trabalho de quando quisermos mudar o menu alteramos apenas o arquivo menu.php:
+----
+//(menu.php:)
+HOME | ESPORTES | TECNOLOGIA|  CULINÁRIA | CONTATO | <br>
+
+----
+//(index.php:)
+<?php
+include "menu.php":
+?>
+
+ INDEX <br>
+
+
+----
+//(esportes.php:)
+<?php
+include "menu.php":
+?>
+Esportes: <br>
+	Notícias de esporte ...
+
+
+----
+
+//(tecnologia.php:)
+<?php
+include "menu.php":
+?>
+Tecnologia: <br>
+	Notícias de tecnologia ...
+
+-----
+etc.

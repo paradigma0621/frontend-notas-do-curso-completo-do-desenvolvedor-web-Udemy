@@ -1,0 +1,19 @@
+(video 071)
+
+Alguns browsers não suportam HTML5 (por exemplo o Internet Explorer anterior a 9). O seguinte script resolve o problema:
+Código para utilização do html5shim (ou também chamada de html5shiv)
+
+https://github.com/aFarkas/html5shiv
+
+versão simplificada:
+https://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.min.js
+------------------------
+Script para anexar ao html, dentro da tag <head>.
+
+<!--[if IE]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+-----------------------
+gravar o script em: js/html5shiv.js
+

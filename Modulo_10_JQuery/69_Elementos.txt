@@ -1,0 +1,49 @@
+(video 171)
+--------------------------
+Como selecionar elementos:
+$(elemento).uma_acao();
+
+podemos pegar elementos através da TAG, ID ou Class.
+ a "uma_acao" são as funções já disponíveis no jQuery.
+
+Para esconder os parágrafos e inputs do exemplo html é simples, pois tem apenas 1 conjunto de cada, porém não ocorre o mesmo para as DIVs, pois o documento inteiro está com divs espalhadas. O recurso para contornar esse problema é incluir um atributo class nos elementos DIVs que queremos ocultar. Por exemplo, abaixo fomos mais especificos na definição das divs declarando nelas que elas são de classe "div_2"
+
+<div style="height: 100px; width: 100px; background:#428bca;" class="pull-left"></div>
+<div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="pull-left"></div>
+-----
+ficará como:
+<div style="height: 100px; width: 100px; background:#428bca;" class="div_2 pull-left"></div>
+<div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="div_2 pull-left"></div>
+
+Como estamos querendo ser específicos na exibição e elementos por classe, temos que criar uma nova função:
+
+function exibeElementoPorClasse(classe) {
+	$("."+classe).show();
+//mesma coisa que fazer: $(".div_2").show();
+}
+
+function escondeElementoPorClasse(classe) {
+	$("."+classe).hide();
+}
+-------------------------------
+É possível também exibir e esconder por ID:
+
+function exibeElementoPorID(id) {
+	$("#"+id).show();
+//mesma coisa que fazer: $("#id").show();
+//que no nosso caso é  a: $("#ID_Titulo").show();
+}
+
+function escondeElementoPorID(id) {
+	$("#"+id).hide();
+}
+----------------------------------
+
+Importante salientar que quando declaramos uma atitude do código quando apertamos um botão (por exemplo), é possível passar mais de um comando, exemplo:
+<button type="button" class="btn btn-success" onclick="exibeElementoPorId('ID_Titulo'); operaUmaOutraFuncao(); aindaOutraFuncao();"> Exibir título (por ID)</button>
+
+nesse caso estamos pedindo para executar 3 funções caso o botão seja pressionado:
+	exibeElementoPorId('ID_Titulo');
+	operaUmaOutraFuncao();
+	aindaOutraFuncao();
+

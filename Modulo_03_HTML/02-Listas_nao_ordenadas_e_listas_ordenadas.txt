@@ -1,0 +1,30 @@
+(video 16) - lista não ordenada.
+
+cria-se o famoso "item" do word/latex:
+
+lista não ordenada: <ul>
+dentro dessa tag usa-se a tag <li> (list item) para cada elemento da lista.
+
+<ul>
+	<li> item 1 </li>
+	<li> item 2 </li>
+	<li> item 3 </li>
+</ul>
+
+----------------------------------------
+
+(video 17) - listas ordenadas
+lista ordenada: <ol>
+
+<ol>
+	<li> item 1 </li>
+	<li> item 2 </li>
+	<li> item 3 </li>
+</ol>
+
+na lista não ordenada tem marcadores (bolinhas).
+na lista ordenada é colocado números como marcadores.
+1. item 1
+2. item 2
+...
+-----------------------------------

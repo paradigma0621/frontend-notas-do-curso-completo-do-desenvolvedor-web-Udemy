@@ -1,0 +1,35 @@
+(video 249)
+------------------------------------------------------------------------------------------
+
+RELACIONAMENTO ENTRE TABELAS:
+----------------------------
+
+É pelo que vou dizer aqui que o MySQL é dito RELACIONAL.
+
+------------------------------------------------------------------------------------------
+
+***Chave primário***: ID (identificador) (quando for constituída por 2 ou mais campos recebe o nome  de *chave composta*.
+
+***Chave estrangeira***: referência em uma tabela de uma chave primária de outra tabela.
+
+
+------------------------------------------------------------------------------------------
+
+
+Relacionamento de 1 para 1 (muito pouco utilizado):
+--------------------------
+Pode ser que seja interessante criar mais de uma tabela para guardar informções, vamos dizer por exemplo, dos dados de funcionários de uma empresa. Ver o exemplo dado na imagem: 102_Imagem_01.jpg
+O que há em comum entre todas as tabelas é o id_funcionário. Elas estão relacionadas, e isso pode tanto simplificar gerar um relatório, onde todas as informação não são necessários, sem falar que pesquisar nessas tabelas pode se tornar muito mais rápido.
+
+
+
+Relacionamento de 1 para vários: 
+--------------------------------
+Ou podemos ter a relação entre tabelas onde, por exemplo, uma tabela guarda as informações sobre o cliente, e temos outras diversas tabelas onde são armazenados os pedidos desse cliente para uma determinada loja (1 tabela para cada pedido, onde um cliente pode ter 1 ou vários pedidos). Esse caso é muito mais comum, e pode ser visualizado na imagem 102_Imagem_02.png
+
+
+
+Relacionamento de vários para vários: 
+-------------------------------------
+Ou podemos ter a relação entre tabelas onde, por exemplo, uma tabela guarda as informações sobre os alunos (uma tabela para cada aluno), e temos outras diversas tabelas onde são armazenados dados sobre os cursos (uma tabela para cada curso), sendo que cada aluno pode estar matriculado em vários cursos, e que cada curso tem vários alunos. Temos também tabelas intermediárias que ligam alunos e cursos, com pode ser visualizado na imagem 102_Imagem_03.jpg
+
